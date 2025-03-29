@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psikolog Nur Hisarcıklıoğlu | Kayseri & Online Danışmanlık - Alternatif Tasarım</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Genel Stil Ayarları */
+        :root {
+            --bg-color: #fdfdfd; /* Neredeyse beyaz */
+            --card-bg: #ffffff;
+            --text-color: #4a4a4a; /* Koyu Gri */
+            --heading-color: #2c5d63; /* Yumuşak Koyu Yeşil-Mavi */
+            --accent-color: #d4a373; /* Yumuşak Kahve/Altın */
+            --subtle-border: #e0e0e0;
+            --soft-highlight: #f1f1f1; /* Hafif vurgu */
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            font-weight: 400; /* Nunito için default */
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 25px;
+            overflow: hidden;
+        }
+
+        /* Başlıklar */
+        h1, h2, h3 {
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            font-weight: 600; /* Başlıklar biraz daha kalın */
+        }
+
+        h1 { font-size: 2.6em; }
+        h2 { font-size: 2em; margin-top: 2.5em; padding-bottom: 10px; border-bottom: 1px solid var(--subtle-border);}
+        h3 { font-size: 1.4em; color: var(--heading-color); font-weight: 600; margin-bottom: 0.7em;}
+
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1.05em;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--heading-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Yumuşak kenarlar */
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            padding: 15px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--heading-color);
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 25px;
+        }
+
+        header nav ul li a {
+            font-weight: 600;
+        }
+
+        /* Hero Alanı - Alternatif */
+        #hero-alt {
+            background-color: var(--bg-color);
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #hero-alt .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* İki sütunlu yapı */
+            gap: 50px;
+            align-items: center;
+        }
+
+         #hero-alt .hero-text {
+             padding-right: 30px; /* Resimle metin arasına boşluk */
+         }
+
+        #hero-alt h1 {
+            font-size: 3em;
+            line-height: 1.2;
+            margin-bottom: 0.6em;
+        }
+
+        #hero-alt .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 1.8em;
+            color: #5c6b73; /* Biraz daha belirgin alt yazı */
+        }
+
+        .cta-button-alt {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 50px; /* Yuvarlak buton */
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .cta-button-alt:hover {
+            background: #b08968; /* Hover için biraz koyu kahve */
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        #hero-alt .hero-image img {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 500px; /* Resim yüksekliğini sınırlayalım */
+            object-fit: cover;
+        }
+
+
+        /* Bölüm Stilleri */
+        section {
+            padding: 70px 0;
+        }
+
+        section.highlight-section {
+             background-color: var(--soft-highlight); /* Hafif vurgulu arka plan */
+             border-top: 1px solid var(--subtle-border);
+             border-bottom: 1px solid var(--subtle-border);
+        }
+
+        /* Yaklaşım Bölümü */
+        #approach {
+            text-align: center;
+        }
+        #approach blockquote {
+            font-size: 1.3em;
+            font-style: italic;
+            color: var(--heading-color);
+            margin: 30px auto;
+            max-width: 800px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        /* Hizmetler Bölümü - Alternatif */
+        #services-alt .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.09);
+        }
+
+         .service-card h3::before { /* Başlık önüne küçük bir ikon */
+             content: '✓ '; /* Veya başka bir unicode karakter */
+             color: var(--accent-color);
+             margin-right: 8px;
+         }
+
+        /* Online Odak Bölümü */
+        #online-focus .container {
+             display: grid;
+             grid-template-columns: 1fr 1.2fr;
+             gap: 50px;
+             align-items: center;
+         }
+
+        #online-focus ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #online-focus li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="%23d4a373"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.409 9.956l-3.591-3.591-1.414 1.414 5.005 5.005 8.591-8.591-1.414-1.414-7.177 7.177z"/></svg>') no-repeat left 5px; /* Farklı bir ikon */
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* Danışan Yorumları - Alternatif */
+        #testimonials-alt .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--subtle-border);
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+        }
+
+         .testimonial-card p:first-of-type { /* İlk paragraf (yorum) */
+             font-style: italic;
+             color: #555;
+             margin-bottom: 1em;
+         }
+         .testimonial-card p:last-of-type { /* Yazar */
+             font-weight: 600;
+             color: var(--heading-color);
+             text-align: right;
+             margin-bottom: 0;
+         }
+         .testimonial-card p:last-of-type::before {
+              content: "— ";
+         }
+
+        /* Hakkımda - Alternatif (Daha detaylı bilgi) */
+         #about-alt ul {
+             columns: 2; /* Eğitimleri iki sütunda gösterelim */
+             list-style-position: inside;
+             padding-left: 0;
+         }
+          #about-alt li {
+              margin-bottom: 8px;
+          }
+
+
+        /* İletişim */
+        #contact-alt .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+
+        #contact-alt .contact-details p {
+            margin-bottom: 0.8em;
+            font-size: 1.1em;
+        }
+         #contact-alt .contact-details strong {
+              color: var(--heading-color);
+              margin-right: 5px;
+         }
+
+         #contact-alt .map-container-alt {
+             position: relative;
+             padding-bottom: 75%; /* Harita için daha dikey bir oran */
+             height: 0;
+             overflow: hidden;
+             max-width: 100%;
+             background: #eee;
+             border-radius: 8px;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+         }
+
+         #contact-alt .map-container-alt iframe {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             border: 0;
+         }
+
+        /* Footer */
+        footer {
+            background: var(--heading-color);
+            color: #f1f1f1;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+        }
+         footer a {
+            color: var(--accent-color);
+         }
+         footer a:hover {
+             color: #fff;
+         }
+
+
+        /* Responsive Tasarım */
+        @media (max-width: 992px) {
+            #hero-alt .container {
+                grid-template-columns: 1fr; /* Hero'yu tek sütuna düşür */
+                text-align: center;
+            }
+             #hero-alt .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px; /* Metin ile resim arasına boşluk */
+             }
+             #hero-alt .hero-image {
+                 order: -1; /* Resmi üste al (isteğe bağlı) */
+                 margin-bottom: 30px;
+             }
+             #online-focus .container {
+                 grid-template-columns: 1fr; /* Tek sütun */
+             }
+              #online-focus img {
+                 margin-top: 30px; /* Resimle metin arasına boşluk */
+             }
+             #contact-alt .contact-grid {
+                 grid-template-columns: 1fr; /* Tek sütun */
+             }
+             #contact-alt .map-container-alt {
+                  margin-top: 30px;
+                  padding-bottom: 60%; /* Harita oranını ayarla */
+             }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.7em; }
+            #hero-alt h1 { font-size: 2.5em; }
+             #hero-alt .subtitle { font-size: 1.1em; }
+            .container { padding: 0 15px; }
+
+            header .container {
+                 flex-direction: column;
+            }
+            header nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+             header nav ul li {
+                 margin: 5px 10px;
+             }
+             #about-alt ul {
+                  columns: 1; /* Tek sütun */
+             }
+        }
+
+         @media (max-width: 480px) {
+             h1 { font-size: 1.9em; }
+             h2 { font-size: 1.5em; }
+             #hero-alt h1 { font-size: 2.1em; }
+             .cta-button-alt { font-size: 1em; padding: 12px 25px;}
+             #services-alt .service-grid, #testimonials-alt .testimonial-grid {
+                 grid-template-columns: 1fr; /* Mobil için tek sütun */
+                 gap: 25px;
+             }
+              .service-card, .testimonial-card {
+                  padding: 25px;
+              }
+              body { font-size: 15px; /* Mobil için temel fontu biraz küçült */ }
+              p { font-size: 1em; }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Psk. Nur Hisarcıklıoğlu</div>
+            <nav>
+                <ul>
+                    <li><a href="#approach">Yaklaşımım</a></li>
+                    <li><a href="#services-alt">Hizmetler</a></li>
+                    <li><a href="#online-focus">Online Terapi</a></li>
+                    <li><a href="#testimonials-alt">Yorumlar</a></li>
+                    <li><a href="#about-alt">Hakkımda</a></li>
+                    <li><a href="#contact-alt">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero-alt">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Daha İyi Hissetmek, Daha Güçlü Bağlar Kurmak Mümkün</h1>
+                <p class="subtitle">Kayseri'de yüz yüze veya dünyanın her yerinden online olarak, size özel psikolojik danışmanlık hizmeti ile yanınızdayım.</p>
+                <a href="#contact-alt" class="cta-button-alt">Hemen Bilgi Alın</a>
+            </div>
+            <div class="hero-image">
+                <img src="nur1.png" alt="Psikolog Nur Hisarcıklıoğlu">
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="highlight-section">
+        <div class="container">
+            <h2>Benim Yaklaşımım</h2>
+            <p>Terapi, sadece sorunlar derinleştiğinde başvurulan bir yer değil, aynı zamanda kendinizi daha iyi tanımak, ilişkilerinizi onarmak ve potansiyelinizi gerçekleştirmek için atılan cesur bir adımdır. [17]</p>
+            <blockquote>
+                "Mutluluk yakalanabilen veya peşinde koşulabilen bir kavram değildir. Mutluluk fark edebilmektir." [68] Bu farkındalığı birlikte keşfetmeyi, iletişimde 'Sen Dili' yerine 'Ben Dili'ni kullanarak [44-52] daha sağlıklı bağlar kurmanızı ve zorluklar karşısında daha dayanıklı olmanızı hedefliyorum.
+            </blockquote>
+            <p>Sürecimiz; güven, empati ve bilimsel yöntemlerin ışığında, sizin ihtiyaçlarınıza özel olarak şekillenir.</p>
+            <img src="nur2.png" alt="Nur Hisarcıklıoğlu çalışma ortamı" style="max-width: 350px; margin-top: 30px; box-shadow: 0 6px 15px rgba(0,0,0,0.08);">
+        </div>
+    </section>
+
+
+     <section id="services-alt">
+        <div class="container">
+            <h2>Nasıl Yardımcı Olabilirim?</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Çift & Evlilik Danışmanlığı</h3>
+                    <p>İletişim kopuklukları, güven sorunları, aldatma travması veya sadece ilişkinizi daha iyi bir noktaya taşımak istediğinizde yanınızdayım.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bireysel Danışmanlık</h3>
+                    <p>Kaygı, depresyon, stres, özgüven eksikliği, panik atak gibi ruhsal zorlanmalarda veya kişisel gelişim yolculuğunuzda size rehberlik ediyorum.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ergen Danışmanlığı</h3>
+                    <p>Gençlerin sınav kaygısı, sosyal zorluklar, aile içi çatışmalar gibi konularda kendilerini anlamalarına ve çözüm üretmelerine destek oluyorum.</p>
+                </div>
+                 <div class="service-card">
+                    <h3>Online Danışmanlık</h3>
+                    <p>Yoğun temponuz, farklı şehirde yaşamanız veya evden çıkmanın zor olduğu durumlarda, online platformlar üzerinden güvenli ve etkili terapi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="online-focus" class="highlight-section">
+         <div class="container">
+             <img src="nur4.png" alt="Online terapi ile iletişimde olan kişi" style="box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
+             <div>
+                <h2>Online Terapinin Gücüyle Tanışın</h2>
+                <p>Teknolojinin sunduğu imkanlarla, psikolojik desteğe ulaşmak artık çok daha kolay. Nerede olursanız olun, size bir tık uzaktayım.</p>
+                 <ul>
+                    <li>Erişilebilirlik: Farklı şehir veya ülkelerden bağlanma imkanı. [233]</li>
+                    <li>Esneklik: Yoğun programınıza uygun seans saatleri. [234]</li>
+                    <li>Konfor: Kendi güvenli alanınızda terapi alma rahatlığı. [234]</li>
+                    <li>Gizlilik: Güvenli platformlar üzerinden gizliliğiniz korunur. [244, 246]</li>
+                    <li>Süreklilik: Seyahat veya taşınma durumunda bile terapinize devam edebilirsiniz. [235]</li>
+                </ul>
+                <a href="#contact-alt" class="cta-button-alt" style="background-color:var(--heading-color); color:#fff;">Online Seans Detayları</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials-alt">
+        <div class="container">
+            <h2>Danışanlarım Anlatıyor</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                     <p>"Nur hocamla çift terapisi sayesinde tanıştık... ılımlı ve güleryüzlü... Hem eşimi hem de beni ayrı ayrı dinleyip fikirlerimize saygı duymamız gerektiğini, sevgi dilimizi bize anlattı." [78, 79]</p>
+                     <p>Çift Terapisi Danışanı</p>
+                </div>
+                 <div class="testimonial-card">
+                     <p>"Başta online olarak aldığım danışmanlık hizmetine yüz yüze olarak devam ettik... sayesinde artık yaşam kalitemin farkına varabiliyorum... Acaba ne olacak korkusu yaşamadan hayatıma bakabiliyorum." [84]</p>
+                     <p>Panik Atak Danışanı</p>
+                </div>
+                 <div class="testimonial-card">
+                     <p>"Kiminle görüştüysem Nur hocam kadar büyük bi etki görmedim. İç dünyamda olan özgüvensizliğimi aştığımı hissediyorum. Çevremdeki insanlar bende ki değişimi fark ediyor..." [87, 88]</p>
+                     <p>Özgüven Danışanı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-alt">
+        <div class="container">
+            <h2>Akademik Geçmişim ve Yetkinliklerim</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start;">
+                <div>
+                    <p><strong>Eğitim:</strong> Girne Amerikan Üniversitesi, İngilizce Psikoloji (Onur Öğrencisi) [96]</p>
+                    <p><strong>Deneyim:</strong> TMS Clinic Kayseri Şubesi, Ülke Plaza [78, 97]</p>
+                    <p><strong>Yaklaşımlar:</strong> Bilişsel Davranışçı Terapi (BDT), Gottman Çift Terapisi, Çözüm Odaklı Terapi, Cinsel Terapi [98, 54]</p>
+                </div>
+                 <div>
+                     <h3>Aldığım Bazı Eğitimler & Sertifikalar:</h3>
+                     <ul>
+                         <li>Cinsel Terapi Eğitimi [98]</li>
+                         <li>Bilişsel Davranışçı Terapi Eğitimi [98]</li>
+                         <li>Çözüm Odaklı Terapi Eğitimi [98]</li>
+                         <li>MMPI Eğitimi [98]</li>
+                         <li>WISC-R Eğitimi [98]</li>
+                         <li>(Diğer ilgili eğitimler buraya eklenebilir)</li>
+                     </ul>
+                </div>
+            </div>
+             <div style="text-align:center; margin-top: 40px;">
+                <img src="nur3.png" alt="Nur Hisarcıklıoğlu detay" style="max-width: 50%; border-radius: 50%; box-shadow: 0 6px 15px rgba(0,0,0,0.08);">
+             </div>
+        </div>
+    </section>
+
+
+    <section id="contact-alt" class="highlight-section">
+        <div class="container">
+             <h2>İletişime Geçin, İlk Adımı Atın</h2>
+             <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">Randevu almak, online veya yüz yüze seanslar hakkında bilgi edinmek için aşağıdaki bilgilerden bana ulaşabilirsiniz.</p>
+            <div class="contact-grid">
+                 <div class="contact-details">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><strong>Adres:</strong> Ülke Plaza, [Kat ve No bilgisi], Melikgazi / KAYSERİ [7, 14]</p>
+                    <p><strong>Telefon:</strong> <a href="tel:[Telefon No]">[Telefon Numaranızı Buraya Ekleyin]</a></p>
+                    <p><strong>E-posta:</strong> <a href="mailto:[Eposta Adresi]">[E-posta Adresinizi Buraya Ekleyin]</a></p>
+                    <p><strong>Çalışma Saatleri:</strong> [Çalışma Saatlerinizi Ekleyin]</p>
+                    <a href="#" class="cta-button-alt" style="margin-top: 20px;">Hızlı Randevu Talebi</a> </div>
+                <div class="map-container-alt">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135359.7805889267!2d29.655182899999975!3d39.877042576548554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b13002b4bb8b5%3A0xc9fd88c4591f1c8!2s%C3%9Clke%20plaza!5e0!3m2!1str!2str!4v1743216540531!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <p style="text-align: center; padding-top:10px; font-size:0.9em;">*Google Haritalar'dan Ülke Plaza Kayseri konumu için 'Harita yerleştir' kodunu yukarıdaki iframe yerine ekleyiniz.*</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Psikolog Nur Hisarcıklıoğlu. Tüm hakları saklıdır.</p>
+             <p>
+                 <a href="#approach">Yaklaşımım</a> |
+                 <a href="#services-alt">Hizmetler</a> |
+                 <a href="#online-focus">Online Terapi</a> |
+                 <a href="#contact-alt">İletişim</a>
+                 </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Header yüksekliğini hesaba katmak için (opsiyonel)
+                    // const headerOffset = document.querySelector('header').offsetHeight;
+                    // const elementPosition = targetElement.getBoundingClientRect().top;
+                    // const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    // window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+
+                     targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

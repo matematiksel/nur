@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psikolog Nur Hisarcıklıoğlu | Profesyonel Danışmanlık - Tasarım 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Genel Stil Ayarları - Tasarım 5 (Profesyonel/Klinik Esintili) */
+        :root {
+            --primary-color: #3a7ca5; /* Profesyonel Mavi */
+            --secondary-color: #8fc1e3; /* Açık Mavi */
+            --light-bg: #f8f9fa; /* Açık Gri Arka Plan */
+            --white-bg: #ffffff;
+            --dark-text: #343a40; /* Koyu Gri Metin */
+            --medium-text: #6c757d; /* Orta Gri Metin */
+            --light-text: #ffffff;
+            --border-color: #dee2e6; /* İnce Sınır Rengi */
+            --heading-font: 'Open Sans', sans-serif;
+            --body-font: 'Open Sans', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scroll için */
+            scroll-padding-top: 70px; /* Sticky header için boşluk */
+        }
+
+        body {
+            font-family: var(--body-font);
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background-color: var(--white-bg);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+            padding: 0 15px; /* Daha dar yan boşluklar */
+        }
+
+        /* Başlıklar */
+        h1, h2, h3, h4 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            color: var(--dark-text);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; margin-bottom: 1.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-color); text-align: center;}
+        h3 { font-size: 1.4em; font-weight: 600; color: var(--primary-color); margin-bottom: 0.8rem;}
+        h4 { font-size: 1.1em; font-weight: 600; margin-bottom: 0.6rem; }
+
+        p {
+            margin-bottom: 1.3em;
+            color: var(--medium-text);
+        }
+        p.lead { /* Vurgulu paragraf */
+            font-size: 1.15em;
+            font-weight: 400;
+            color: var(--dark-text);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2a5a7a; /* Koyu Mavi */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* Bölüm Stilleri */
+        section {
+            padding: 70px 0;
+        }
+        .bg-light-gray {
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        /* Header - Tasarım 5 (Sticky) */
+        .header-alt5 {
+            background: var(--white-bg);
+            padding: 10px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky; /* Yapışkan header */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-alt5 .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-alt5 .logo {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .header-alt5 nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center; /* Butonla hizala */
+        }
+
+        .header-alt5 nav ul li {
+            margin-left: 25px;
+        }
+
+        .header-alt5 nav ul li a {
+            font-weight: 600;
+            color: var(--dark-text);
+            padding: 8px 0;
+            position: relative;
+        }
+         .header-alt5 nav ul li a::after { /* Hover alt çizgisi */
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+         }
+          .header-alt5 nav ul li a:hover::after {
+            width: 100%;
+          }
+
+        .header-cta { /* Header'daki buton */
+            margin-left: 30px;
+        }
+
+        /* Buton Stilleri */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 0.95em;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+         .btn-primary:hover {
+             background-color: #2a5a7a; /* Koyu mavi */
+             color: var(--light-text);
+             transform: translateY(-2px);
+             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         }
+        .btn-outline-primary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+         .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+         }
+
+
+        /* Hero Alanı - Tasarım 5 */
+        #hero-alt5 {
+            background: linear-gradient(rgba(58, 124, 165, 0.6), rgba(42, 90, 122, 0.7)), url('nur1.png') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax etkisi */
+            padding: 120px 0;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-text);
+        }
+
+        #hero-alt5 h1 {
+            font-size: 3.2em;
+            margin-bottom: 0.6em;
+            color: var(--light-text);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+
+        #hero-alt5 .subtitle {
+            font-size: 1.25em;
+            margin-bottom: 2.5em;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        #hero-alt5 .hero-buttons .btn {
+             margin: 0 10px;
+        }
+
+
+        /* Giriş Bölümü */
+        #intro-alt5 {
+             padding-bottom: 40px; /* Alt boşluğu biraz azalt */
+        }
+        #intro-alt5 .intro-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+         #intro-alt5 img {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+         }
+
+        /* Hizmetler - Tasarım 5 */
+        #services-alt5 .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 2rem;
+        }
+        .service-card-alt5 {
+            background: var(--white-bg);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            text-align: left;
+            display: flex; /* İkon ve metni yan yana */
+            align-items: flex-start;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .service-card-alt5:hover {
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            border-color: var(--secondary-color);
+        }
+        .service-card-alt5 .icon {
+            font-size: 1.8em; /* İkon boyutu */
+            color: var(--primary-color);
+            margin-right: 20px;
+            margin-top: 5px;
+            min-width: 30px; /* İkon için sabit genişlik */
+            text-align: center;
+        }
+        .service-card-alt5 .content h4 {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+
+        /* Yaklaşım */
+        #approach-alt5 {
+            text-align: center;
+        }
+         #approach-alt5 .container {
+            max-width: 900px;
+         }
+
+        /* Online Terapi */
+        #online-alt5 ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         #online-alt5 li {
+             padding-left: 30px;
+             position: relative;
+             margin-bottom: 1em;
+         }
+         #online-alt5 li::before {
+            content: '✓'; /* Unicode Checkmark */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+         }
+
+        /* Testimonials */
+        #testimonials-alt5 .testimonial-item-alt5 {
+             background: var(--white-bg);
+             padding: 30px;
+             border: 1px solid var(--border-color);
+             border-left: 4px solid var(--secondary-color);
+             border-radius: 5px;
+             margin-bottom: 25px;
+             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+         #testimonials-alt5 .testimonial-item-alt5 p:first-of-type {
+            font-style: italic;
+            color: var(--medium-text);
+            margin-bottom: 1em;
+         }
+         #testimonials-alt5 .testimonial-item-alt5 footer {
+             font-weight: 600;
+             color: var(--dark-text);
+             text-align: right;
+             font-size: 0.95em;
+         }
+          #testimonials-alt5 .testimonial-item-alt5 footer::before { content: "— ";}
+
+          /* Tek bir yorum gösterilecekse */
+          #testimonials-alt5 .single-testimonial {
+              max-width: 800px;
+              margin: 2rem auto 0 auto;
+          }
+
+
+        /* Yetkinlikler */
+        #credentials-alt5 ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+        #credentials-alt5 li {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+         #credentials-alt5 li:hover {
+             background-color: var(--light-bg);
+         }
+         #credentials-alt5 li strong {
+             color: var(--primary-color);
+             font-weight: 600;
+         }
+
+        /* İletişim */
+        #contact-alt5 .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr; /* Harita biraz daha geniş */
+            gap: 40px;
+            margin-top: 2rem;
+            align-items: start;
+        }
+        #contact-alt5 .contact-details p {
+            margin-bottom: 1em;
+            display: flex; /* İkon ve metni hizala */
+            align-items: flex-start;
+        }
+         #contact-alt5 .contact-details .icon {
+            color: var(--primary-color);
+            margin-right: 12px;
+            margin-top: 3px;
+            width: 20px; /* İkon genişliği */
+            text-align: center;
+         }
+        #contact-alt5 .map-container iframe {
+             width: 100%;
+             height: 400px;
+             border: 1px solid var(--border-color);
+             border-radius: 6px;
+        }
+
+        /* Footer - Tasarım 5 */
+        .footer-alt5 {
+            background: var(--dark-text);
+            color: var(--light-bg);
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+         .footer-alt5 .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+         }
+          .footer-alt5 .footer-links a {
+             color: var(--secondary-color);
+             margin-left: 15px;
+             border-bottom: 1px solid transparent;
+          }
+          .footer-alt5 .footer-links a:hover {
+             color: var(--light-text);
+             border-bottom-color: var(--secondary-color);
+          }
+
+
+        /* Responsive Tasarım */
+        @media (max-width: 992px) {
+             h1 { font-size: 2.5em; }
+             h2 { font-size: 2em; }
+             #hero-alt5 h1 { font-size: 2.8em; }
+             #intro-alt5 .intro-content { grid-template-columns: 1fr; } /* Girişi tek sütun yap */
+             #intro-alt5 img { margin-top: 30px; max-width: 70%; margin-left: auto; margin-right: auto;}
+             #contact-alt5 .contact-grid { grid-template-columns: 1fr; } /* İletişimi tek sütun yap */
+              #contact-alt5 .map-container { margin-top: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            html { scroll-padding-top: 60px; /* Mobil için header boşluğu */ }
+            body { font-size: 15px; }
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; margin-bottom: 1.5rem; }
+             h3 { font-size: 1.3em; }
+             #hero-alt5 { padding: 100px 0 80px 0; background-attachment: scroll; /* Mobilde parallax'ı kaldır */}
+             #hero-alt5 h1 { font-size: 2.4em; }
+             #hero-alt5 .subtitle { font-size: 1.15em; }
+             .header-alt5 { padding: 8px 0; /* Daha ince header */ }
+             .header-alt5 .container { flex-direction: column; }
+             .header-alt5 .logo { margin-bottom: 10px;}
+             .header-alt5 nav { width: 100%; }
+             .header-alt5 nav ul { justify-content: center; flex-wrap: wrap; padding-top: 5px; }
+             .header-alt5 nav ul li { margin: 5px 10px; }
+             .header-cta { display: none; /* Mobil menüde buton gizlenebilir veya farklı yere konabilir */ }
+             #services-alt5 .service-grid { grid-template-columns: 1fr; } /* Tek sütun */
+             .footer-alt5 .container { flex-direction: column; text-align: center;}
+             .footer-alt5 .footer-links { margin-top: 10px; }
+             .footer-alt5 .footer-links a { margin: 0 8px; }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header class="header-alt5 sticky-header">
+        <div class="container">
+            <div class="logo">Psk. Nur Hisarcıklıoğlu</div>
+            <nav>
+                <ul>
+                    <li><a href="#services-alt5">Hizmetler</a></li>
+                    <li><a href="#approach-alt5">Yaklaşımım</a></li>
+                    <li><a href="#online-alt5">Online Terapi</a></li>
+                    <li><a href="#testimonials-alt5">Yorumlar</a></li>
+                    <li><a href="#credentials-alt5">Yetkinlikler</a></li>
+                    <li><a href="#contact-alt5">İletişim</a></li>
+                    <li class="header-cta"><a href="#contact-alt5" class="btn btn-primary">Randevu Al</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-alt5">
+            <div class="hero-content">
+                <h1>Daha Anlamlı Bir Yaşam ve İlişkiler İçin Profesyonel Destek</h1>
+                <p class="subtitle">Kayseri'de yüz yüze veya online olarak, Psikolog Nur Hisarcıklıoğlu rehberliğinde ruhsal sağlığınızı ve ilişkilerinizi güçlendirin.</p>
+                <div class="hero-buttons">
+                    <a href="#services-alt5" class="btn btn-primary btn-lg">Hizmetlerimi Keşfedin</a>
+                    <a href="#contact-alt5" class="btn btn-outline-primary btn-lg" style="border-color: white; color: white;">İletişime Geçin</a>
+                </div>
+            </div>
+        </section>
+
+         <section id="intro-alt5" class="bg-light-gray">
+             <div class="container">
+                 <div class="intro-content">
+                     <div>
+                        <h2>Hayatın Zorluklarında Yanınızdayım</h2>
+                        <p class="lead">Zaman zaman hepimiz yolumuzu kaybedebilir, ilişkilerimizde zorlanabilir veya içsel sıkıntılarla mücadele edebiliriz. Psikolojik destek aramak, bu süreçte kendinize yapacağınız en önemli iyiliklerden biridir.</p>
+                        <p>Amacım, size güvenli, yargısız ve destekleyici bir ortam sunarak, yaşadığınız zorlukların üstesinden gelmenize, kendinizi daha iyi anlamanıza ve potansiyelinizi ortaya çıkarmanıza yardımcı olmaktır.</p>
+                        <a href="#approach-alt5" class="btn btn-outline-primary">Yaklaşımımı Öğrenin</a>
+                     </div>
+                     <div>
+                         <img src="nur2.png" alt="Psikolog Nur Hisarcıklıoğlu - Profesyonel Portre">
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <section id="services-alt5">
+            <div class="container">
+                 <h2>Sunduğum Danışmanlık Hizmetleri</h2>
+                 <div class="service-grid">
+                    <div class="service-card-alt5">
+                        <div class="icon">👥</div> <div class="content">
+                            <h4>Çift ve Evlilik Terapisi</h4>
+                            <p>İletişim sorunları, çatışmalar, güven problemleri ve ilişkiyi güçlendirme üzerine odaklı seanslar.</p>
+                        </div>
+                    </div>
+                    <div class="service-card-alt5">
+                        <div class="icon">👤</div> <div class="content">
+                            <h4>Bireysel Terapi (Yetişkin)</h4>
+                            <p>Kaygı, depresyon, stres, özgüven, travma gibi konularda kişiye özel terapi desteği.</p>
+                        </div>
+                    </div>
+                     <div class="service-card-alt5">
+                        <div class="icon">🧑</div> <div class="content">
+                             <h4>Ergen Danışmanlığı</h4>
+                            <p>Gençlerin akademik, sosyal ve duygusal zorluklarıyla başa çıkmalarına yardımcı olma.</p>
+                        </div>
+                    </div>
+                     <div class="service-card-alt5">
+                        <div class="icon">💻</div> <div class="content">
+                            <h4>Online Terapi</h4>
+                            <p>Konumdan bağımsız, esnek ve güvenli online seanslarla terapiye erişim kolaylığı.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="approach-alt5" class="bg-light-gray">
+            <div class="container">
+                <h2>Terapi Yaklaşımım ve Felsefem</h2>
+                <p class="lead">Her bireyin ve ilişkinin benzersiz olduğuna inanıyorum. Bu nedenle, terapi sürecini sizin özel ihtiyaçlarınıza ve hedeflerinize göre şekillendiriyorum.</p>
+                 <p>Çalışmalarımda, bilimsel geçerliliği kanıtlanmış <strong>Bilişsel Davranışçı Terapi (BDT)</strong> ve özellikle çiftlerle çalışırken <strong>Gottman Çift Terapisi</strong> yöntemlerinden faydalanıyorum. Terapinin temel taşları olarak gördüğüm <strong>empati, şeffaflık, güven ve koşulsuz kabul</strong> ilkeleriyle hareket ediyorum. Amacımız, sorunların kökenine inmekle birlikte, güçlü yanlarınızı keşfetmek ve pratik çözüm becerileri geliştirmektir.</p>
+                 <img src="nur3.png" alt="Terapi ortamı detayı" style="max-width: 400px; margin: 30px auto 0 auto; border: 1px solid var(--border-color);">
+            </div>
+        </section>
+
+        <section id="online-alt5">
+            <div class="container" style="text-align: center;">
+                <h2>Online Terapi ile Mekanları Aşın</h2>
+                <p class="lead">Yoğun yaşam temposu, farklı şehirde bulunma veya ulaşım zorlukları artık psikolojik destek almanıza engel değil.</p>
+                <ul>
+                     <li>Güvenli ve şifrelenmiş platformlar üzerinden gizlilik içinde seanslar.</li>
+                     <li>Kendi evinizin veya ofisinizin konforunda terapi alma imkanı.</li>
+                     <li>Zaman ve mekandan bağımsız esnek randevu seçenekleri.</li>
+                     <li>Yüz yüze terapi kadar etkili sonuçlar elde etme potansiyeli.</li>
+                </ul>
+                <a href="#contact-alt5" class="btn btn-primary" style="margin-top: 1.5rem;">Online Randevu Bilgisi Al</a>
+            </div>
+        </section>
+
+
+        <section id="testimonials-alt5" class="bg-light-gray">
+             <div class="container">
+                 <h2>Danışan Geri Bildirimleri</h2>
+                 <div class="single-testimonial"> <div class="testimonial-item-alt5">
+                        <p>"Nur hocamla çift terapisi sayesinde tanıştık, kendisi ılımlı ve güleryüzlü. Hem eşimi hem de beni ayrı ayrı dinleyip fikirlerimize saygı duymamız gerektiğini, sevgi dilimizi bize anlattı. Evliliğimize yaptığımız en büyük yatırım nur hocamı tercih etmekti." [78-81]</p>
+                        <footer>Çift Terapisi Danışanı</footer>
+                     </div>
+                     <div class="testimonial-item-alt5" style="margin-top: 25px;">
+                        <p>"Kendimi bildim bileli özgüven problemlerim vardı, kiminle görüştüysem Nur hocam kadar büyük bi etki görmedim. İç dünyamda olan özgüvensizliğimi aştığımı hissediyorum... Tatlı dili, güleryüzü ve motive edici konuşmalarıyla her zaman destek oldu." [87-90]</p>
+                        <footer>Özgüven Danışanı</footer>
+                     </div>
+                 </div>
+                 </div>
+        </section>
+
+        <section id="credentials-alt5">
+             <div class="container">
+                <h2>Eğitim ve Mesleki Yetkinlik</h2>
+                 <p style="text-align: center; max-width: 800px; margin-left: auto; margin-right:auto;">Size en iyi hizmeti sunabilmek adına sürekli olarak kendimi geliştirmekte ve güncel bilimsel yaklaşımları takip etmekteyim.</p>
+                 <ul>
+                     <li><strong>Lisans Eğitimi:</strong> Girne Amerikan Üniversitesi - İngilizce Psikoloji (Onur Öğrencisi)</li>
+                     <li><strong>Temel Terapi Ekolleri:</strong> Bilişsel Davranışçı Terapi (BDT), Gottman Çift Terapisi</li>
+                     <li><strong>Sertifikalı Eğitimler:</strong> Cinsel Terapi, Çözüm Odaklı Terapi, MMPI Değerlendirme, WISC-R Zeka Testi</li>
+                     <li><strong>Klinik Deneyim:</strong> Çeşitli kliniklerde stajyerlik, Özel Danışmanlık Merkezi (Ülke Plaza, Kayseri)</li>
+                     <li><strong>Üyelikler:</strong> (Varsa ilgili meslek örgütü üyelikleri eklenebilir)</li>
+                 </ul>
+             </div>
+        </section>
+
+         <section id="contact-alt5" class="bg-light-gray">
+            <div class="container">
+                 <h2>İletişim ve Randevu</h2>
+                 <div class="contact-grid">
+                     <div class="contact-details">
+                         <h3>Randevu Almak İçin</h3>
+                         <p>Aşağıdaki bilgiler aracılığıyla bana ulaşarak randevu oluşturabilir, seanslar ve süreç hakkında detaylı bilgi alabilirsiniz.</p>
+                         <p><span class="icon">📍</span> <strong>Adres:</strong> Ülke Plaza, [Kat/No], Melikgazi / KAYSERİ</p>
+                         <p><span class="icon">📞</span> <strong>Telefon:</strong> <a href="tel:[Telefon No]">[Telefon Numaranızı Buraya Ekleyin]</a></p>
+                         <p><span class="icon">✉️</span> <strong>E-posta:</strong> <a href="mailto:[Eposta Adresi]">[E-posta Adresinizi Buraya Ekleyin]</a></p>
+                         <p><span class="icon">⏰</span> <strong>Saatler:</strong> [Çalışma Saatlerinizi Ekleyin]</p>
+                         <p><span class="icon">💻</span> <strong>Seçenekler:</strong> Yüz Yüze (Kayseri) ve Online Terapi</p>
+                         <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Hemen Randevu Talep Edin</a>
+                     </div>
+                     <div class="map-container">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135359.7805889267!2d29.655182899999975!3d39.877042576548554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b13002b4bb8b5%3A0xc9fd88c4591f1c8!2s%C3%9Clke%20plaza!5e0!3m2!1str!2str!4v1743216540531!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-alt5">
+        <div class="container">
+            <p>© 2025 Psikolog Nur Hisarcıklıoğlu. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                 <a href="#services-alt5">Hizmetler</a> |
+                 <a href="#approach-alt5">Yaklaşımım</a> |
+                 <a href="#contact-alt5">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling (Sticky header için offset ayarı)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                     const headerOffset = document.querySelector('.header-alt5').offsetHeight;
+                     const elementPosition = targetElement.getBoundingClientRect().top;
+                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                     window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                     });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

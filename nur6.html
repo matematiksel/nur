@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psikolog Nur Hisarcıklıoğlu | Kayseri</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #5A7D7C;
+            --secondary-color: #BEDBBB;
+            --accent-color: #F5B461;
+            --text-color: #333;
+            --light-bg: #f7f7f7;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nur3.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* Approach Section */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .approach-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .approach-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .approach-card p {
+            margin-bottom: 15px;
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--white);
+        }
+        
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            color: var(--accent-color);
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .map {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nur4.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-title {
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-title h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-slider {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo p {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h3 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Nur Hisarcıklıoğlu<span>Psikolog</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#ana-sayfa">Ana Sayfa</a></li>
+                    <li><a href="#hakkimda">Hakkımda</a></li>
+                    <li><a href="#hizmetlerim">Hizmetlerim</a></li>
+                    <li><a href="#yaklasimim">Yaklaşımım</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="ana-sayfa">
+        <div class="container hero-content">
+            <h2>Sağlıklı İlişkiler, Sağlıklı Yaşam</h2>
+            <p>"Evliliği bir inşa olarak düşünelim. Bu inşa yapısının kolonlarında bir çatlak meydana geldiğinde aslında biz çiftleri terapiye davet ediyoruz."</p>
+            <a href="#iletisim" class="btn">Randevu Al</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="hakkimda">
+        <div class="container">
+            <div class="section-title">
+                <h3>Hakkımda</h3>
+                <p>Tanışalım</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="nur1.png" alt="Psikolog Nur Hisarcıklıoğlu">
+                </div>
+                <div class="about-text">
+                    <h4>Psikolog Nur Hisarcıklıoğlu</h4>
+                    <p>Kayseri doğumlu olan Nur Hisarcıklıoğlu, Kayseri'de ilk ve orta öğrenimini tamamlamıştır. Lisans eğitimini Girne Amerikan Üniversitesi'nde İngilizce Psikoloji bölümünde tamamlayan Nur Hisarcıklıoğlu onur öğrencisi olarak mezun olmuştur.</p>
+                    <p>Şu an Ülke Plaza Kayseri'de danışanları kabul ediyorum. Evlilik, yetişkin ve ergen çalışıyorum.</p>
+                    <p>Kariyer yaşam boyu devam eden bir süreç olduğundan, kendisine destek için başvuran bireylere daha iyi hizmet sunma amacıyla sürekli kendisini yenilemeye ve geliştirmeye devam etmektedir.</p>
+                    <h4>Aldığım Eğitimler:</h4>
+                    <ul>
+                        <li>Cinsel Terapi</li>
+                        <li>Bilişsel Davranışçı Terapi</li>
+                        <li>Çözüm Odaklı Terapi</li>
+                        <li>MMPI Eğitimi</li>
+                        <li>WISC-R Eğitimi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="hizmetlerim">
+        <div class="container">
+            <div class="section-title">
+                <h3>Hizmetlerim</h3>
+                <p>Size nasıl yardımcı olabilirim?</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Çift Terapisi</h4>
+                    <p>"Çift terapisi sadece sorun yaşayan çiftlerin değil, ilişkisini güçlendirmek isteyen herkesin başvurduğu bir terapi yöntemidir aslında."</p>
+                    <p>İlişkinizi güçlendirmek, iletişim problemlerini çözmek ve daha sağlıklı bir ilişki için profesyonel destek alın.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Yetişkin Terapisi</h4>
+                    <p>Kendinizi daha iyi anlamak, kişisel gelişiminizi desteklemek ve hayatınızdaki zorluklarla başa çıkmak için bireysel terapi desteği alın.</p>
+                    <p>"Mutluluk yakalanabilen veya peşinde koşulabilen bir kavram değildir. Mutluluk fark edebilmektir."</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h4>Ergen Terapisi</h4>
+                    <p>Ergenlik döneminde yaşanan zorlukları aşmak, kimlik gelişimini desteklemek ve sağlıklı bir gelecek için gençlere özel terapi hizmeti.</p>
+                    <p>Genç bireylerin kendilerini keşfetmelerine ve potansiyellerini ortaya çıkarmalarına yardımcı oluyorum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section" id="yaklasimim">
+        <div class="container">
+            <div class="section-title">
+                <h3>Terapi Yaklaşımım</h3>
+                <p>Her insanın farklı bir sevgi dili vardır, parmak izi gibi benzersizdir.</p>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h4>İletişim Odaklı Yaklaşım</h4>
+                    <p class="quote">"Biz çift terapisinde ben dili kullanmaya çok özen gösteriyoruz. [...] Sen dili kullandığımızda çatışma başlar ama ben dili kullanmaya başladığımızda uzlaşmaya varırız, anlaşmaya varırız."</p>
+                    <p>Terapi sürecinde, doğru iletişim tekniklerini öğrenerek ilişkilerdeki çatışmaları çözmeye odaklanıyoruz. İletişim sorunları, en sık karşılaştığımız problemlerdir.</p>
+                </div>
+                <div class="approach-card">
+                    <h4>Bilimsel Yöntemler</h4>
+                    <p class="quote">"Bilişsel davranışçı terapi kullanıyoruz, Gottman çift terapisi var mesela, çok güzeldir, çok etkilidir."</p>
+                    <p>Gottman Çift Terapisi, 30 yıl süren bilimsel bir araştırmaya dayanır ve terapi sürecinde büyük fayda sağlar. Terapi sürecinde kanıtlanmış bilimsel yöntemler kullanıyorum.</p>
+                </div>
+                <div class="approach-card">
+                    <h4>Pratik Egzersizler</h4>
+                    <p class="quote">"Sarılma egzersizimiz var. Sarılın, hissedin birbirinizi, kalbinizin atışını hissedin. Beş duyu organınızı orada bir hissedin. Ne görüyorsunuz, ne kokluyorsunuz?"</p>
+                    <p>Terapi sürecinde, teorik bilgilerin yanı sıra pratik egzersizler de kullanıyorum. Bu egzersizler, çiftlerin birbirlerini daha iyi anlamalarına ve bağlarını güçlendirmelerine yardımcı oluyor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="iletisim">
+        <div class="container">
+            <div class="section-title">
+                <h3>İletişim</h3>
+                <p>Bana ulaşın</p>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <h4>İletişim Bilgilerim</h4>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>Adres</h5>
+                            <p>Ülke Plaza, Kayseri</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h5>Telefon</h5>
+                            <p>+90 XXX XXX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>E-posta</h5>
+                            <p>info@nurhisarciklioglu.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5>Çalışma Saatleri</h5>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                            <p>Cumartesi: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135359.7805889267!2d29.655182899999975!3d39.877042576548554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b13002b4bb8b5%3A0xc9fd88c4591f1c8!2s%C3%9Clke%20plaza!5e0!3m2!1str!2str!4v1743216540531!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container testimonial-content">
+            <div class="testimonial-title">
+                <h3>Danışan Yorumları</h3>
+                <p>Beraber çalıştığım kişilerin deneyimleri</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Nur Hanım ile yaptığımız çift terapileri sayesinde eşimle iletişimimiz tamamen değişti. Ben dili kullanmayı öğrendik ve artık birbirimizi daha iyi anlıyoruz."</p>
+                    <div class="client-name">Z.K.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Psikolog Nur Hisarcıklıoğlu</h3>
+                    <p>"Duygu ve düşüncelerimizi ifade edince aslında orada artık taşlar yerine oturmaya başlamıştır biraz biraz."</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="#ana-sayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkimda">Hakkımda</a></li>
+                        <li><a href="#hizmetlerim">Hizmetlerim</a></li>
+                        <li><a href="#yaklasimim">Yaklaşımım</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Hizmetlerim</h4>
+                    <ul>
+                        <li><a href="#">Çift Terapisi</a></li>
+                        <li><a href="#">Yetişkin Terapisi</a></li>
+                        <li><a href="#">Ergen Terapisi</a></li>
+                        <li><a href="#">Evlilik Terapisi</a></li>
+                        <li><a href="#">Bireysel Terapi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Psikolog Nur Hisarcıklıoğlu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
