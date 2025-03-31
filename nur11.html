@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psikolog Nur Hisarcıklıoğlu | Kayseri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6B4E71; /* Mor-menekşe tonu */
+            --secondary-color: #F2C879; /* Altın sarısı */
+            --accent-color: #5E8B7E; /* Yeşil tonu */
+            --dark-color: #2D3047; /* Koyu lacivert */
+            --light-color: #F7F9FB; /* Açık gri-beyaz */
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(242, 200, 121, 0.3);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(107, 78, 113, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: var(--white);
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nur1.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            max-width: 600px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            top: -30px;
+            right: -30px;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            bottom: -20px;
+            left: -20px;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 15px;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(107, 78, 113, 0.05);
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .about::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(94, 139, 126, 0.05);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--secondary-color);
+            border-radius: 10px;
+            top: 20px;
+            left: 20px;
+            z-index: -1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(94, 139, 126, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--accent-color);
+            font-size: 20px;
+        }
+        
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f9f9f9;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(242, 200, 121, 0.1);
+            border-radius: 50%;
+            top: -150px;
+            left: -150px;
+        }
+        
+        .services::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(107, 78, 113, 0.1);
+            border-radius: 50%;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+        }
+        
+        .service-card a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .service-card a i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .service-card a:hover {
+            color: var(--primary-color);
+        }
+        
+        .service-card a:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Approach Section */
+        .approach {
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .approach::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: rgba(94, 139, 126, 0.05);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .approach-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .approach-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .approach-card:nth-child(2)::before {
+            background-color: var(--secondary-color);
+        }
+        
+        .approach-card:nth-child(3)::before {
+            background-color: var(--accent-color);
+        }
+        
+        .approach-card:hover::before {
+            height: 100%;
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .approach-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .approach-card p {
+            margin-bottom: 15px;
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #666;
+        }
+        
+        /* Online Therapy Section */
+        .online-therapy {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .online-therapy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nur3.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .online-therapy .section-title h2 {
+            color: var(--white);
+        }
+        
+        .online-therapy .section-title h2::after {
+            background: linear-gradient(90deg, var(--white), var(--secondary-color));
+        }
+        
+        .online-therapy .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .online-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .online-text {
+            flex: 1;
+        }
+        
+        .online-text p {
+            margin-bottom: 20px;
+        }
+        
+        .online-features {
+            margin-top: 30px;
+        }
+        
+        .online-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .online-feature i {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .online-feature p {
+            margin-bottom: 0;
+        }
+        
+        .online-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .online-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-light {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-light:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(107, 78, 113, 0.05);
+            border-radius: 50%;
+            bottom: -150px;
+            right: -150px;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(94, 139, 126, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--accent-color);
+            font-size: 20px;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .contact-details p, .contact-details a {
+            color: #666;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+        
+        .map {
+            flex: 1;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-logo h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content, 
+            .online-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-image, 
+            .online-image {
+                margin-bottom: 40px;
+            }
+            
+            .about-image img, 
+            .online-image img {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px 30px 30px;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 1001;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                font-size: 1.1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1002;
+            }
+            
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                cursor: pointer;
+                color: var(--primary-color);
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Nur Hisarcıklıoğlu<span>Psikolog</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#about">Hakkımda</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#approach">Yaklaşımım</a></li>
+                    <li><a href="#online">Online Terapi</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <div class="close-menu"><i class="fas fa-times"></i></div>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ruhsal İyileşme Yolculuğunuzda Yanınızdayım</h1>
+                    <p>Kayseri'de profesyonel psikolojik danışmanlık ve terapi hizmetleri sunuyorum. Güvenli ve destekleyici bir ortamda, yaşam kalitenizi artırmak için birlikte çalışalım.</p>
+                    <a href="#contact" class="btn">Randevu Al</a>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/psikolognurhisarciklioglu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/psikolognurhisarciklioglu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="nur1.png" alt="Psikolog Nur Hisarcıklıoğlu">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hakkımda</h2>
+                <p>Profesyonel deneyimim ve eğitimim ile size en iyi psikolojik destek hizmetini sunmayı hedefliyorum.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="nur2.png" alt="Psikolog Nur Hisarcıklıoğlu">
+                </div>
+                <div class="about-text">
+                    <h3>Merhaba, Ben Nur Hisarcıklıoğlu</h3>
+                    <p>Kayseri'de Ülke Plaza'da psikolojik danışmanlık ve terapi hizmetleri sunan uzman bir psikologum. Girne Amerikan Üniversitesi İngilizce Psikoloji bölümünden mezun oldum ve danışanlarımın ruhsal sağlığını iyileştirmek ve yaşam kalitelerini artırmak için kanıta dayalı terapötik yaklaşımlar kullanıyorum.</p>
+                    <p>Eğitimim ve klinik deneyimim, çeşitli psikolojik sorunları ele alma konusunda bana geniş bir perspektif kazandırdı. Her danışanın benzersiz olduğuna ve kişiye özel terapi planlarının en etkili sonuçları verdiğine inanıyorum.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Eğitim</h4>
+                                <p>Girne Amerikan Üniversitesi İngilizce Psikoloji mezunu</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Sertifikalar</h4>
+                                <p>Bilişsel Davranışçı Terapi, EMDR ve Şema Terapi</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Deneyim</h4>
+                                <p>TMS Clinic ve Ülke Plaza'da profesyonel deneyim</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Yaklaşım</h4>
+                                <p>Empatik, destekleyici ve çözüm odaklı terapi yaklaşımı</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerim</h2>
+                <p>Çeşitli psikolojik sorunlar için profesyonel terapi ve danışmanlık hizmetleri sunuyorum.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Bireysel Terapi</h3>
+                    <p>Depresyon, kaygı bozuklukları, stres yönetimi, travma sonrası stres bozukluğu ve diğer psikolojik sorunlar için bireysel terapi hizmetleri.</p>
+                    <a href="#contact">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Çift Terapisi</h3>
+                    <p>İlişki sorunları, iletişim problemleri, evlilik çatışmaları ve ayrılık/boşanma süreçlerinde çiftlere yönelik terapi hizmetleri.</p>
+                    <a href="#contact">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Çocuk ve Ergen Terapisi</h3>
+                    <p>Davranış problemleri, okul sorunları, dikkat eksikliği, kaygı ve depresyon gibi çocuk ve ergenlerin yaşadığı zorluklar için terapi.</p>
+                    <a href="#contact">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Bilişsel Davranışçı Terapi</h3>
+                    <p>Düşünce kalıplarını ve davranışları değiştirerek psikolojik sorunları ele alan kanıta dayalı bir terapi yaklaşımı.</p>
+                    <a href="#contact">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>EMDR Terapisi</h3>
+                    <p>Travmatik anıların işlenmesine yardımcı olan ve travma sonrası stres bozukluğu için etkili bir terapi yöntemi.</p>
+                    <a href="#contact">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Online Terapi</h3>
+                    <p>Coğrafi konumdan bağımsız olarak, güvenli video konferans yoluyla psikoterapi hizmetlerine erişim imkanı.</p>
+                    <a href="#online">Daha Fazla Bilgi <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="section-title">
+                <h2>Terapötik Yaklaşımım</h2>
+                <p>Her danışanın benzersiz olduğuna ve kişiye özel terapi planlarının en etkili sonuçları verdiğine inanıyorum.</p>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h3>Bütüncül Bakış Açısı</h3>
+                    <p>Psikolojik sorunları ele alırken, zihin, beden ve ruh arasındaki bağlantıyı göz önünde bulundurarak bütüncül bir yaklaşım benimsiyorum.</p>
+                    <p>Her danışanın yaşam deneyimleri, kültürel geçmişi ve kişisel değerleri terapi sürecinde dikkate alınır.</p>
+                    <div class="quote">
+                        "İyileşme, kendimizi olduğumuz gibi kabul etmekle başlar."
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <h3>Kanıta Dayalı Uygulamalar</h3>
+                    <p>Terapi yaklaşımlarımda bilimsel araştırmalarla desteklenen, etkinliği kanıtlanmış yöntemleri kullanmayı tercih ediyorum.</p>
+                    <p>Bilişsel Davranışçı Terapi (BDT), EMDR, Şema Terapi ve Gottman yaklaşımı gibi çeşitli yöntemleri entegre ediyorum.</p>
+                    <div class="quote">
+                        "Değişim, düşüncelerimizi değiştirdiğimizde başlar."
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <h3>Güçlü Terapötik İlişki</h3>
+                    <p>Başarılı bir terapi sürecinin temelinde güven, empati ve saygıya dayalı güçlü bir terapist-danışan ilişkisi yatar.</p>
+                    <p>Yargılayıcı olmayan, güvenli bir ortam yaratarak danışanlarımın kendilerini rahatça ifade etmelerini sağlıyorum.</p>
+                    <div class="quote">
+                        "Anlaşıldığını hissetmek, iyileşmenin ilk adımıdır."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Therapy Section -->
+    <section class="online-therapy" id="online">
+        <div class="container">
+            <div class="section-title">
+                <h2>Online Terapi</h2>
+                <p>Artık psikolojik destek hizmetlerine erişim için coğrafi sınırlamalar yok.</p>
+            </div>
+            <div class="online-content">
+                <div class="online-text">
+                    <p>Online terapi, güvenli video konferans yoluyla gerçekleştirilen profesyonel psikoterapi seanslarıdır. Bu hizmet, Kayseri dışında yaşayanlar veya çeşitli nedenlerle ofise gelemeyen danışanlar için ideal bir seçenektir.</p>
+                    <p>Online terapi seansları, yüz yüze terapiyle aynı etik standartlara ve gizlilik ilkelerine bağlı kalarak yürütülür. Seanslar, güvenli bir platform üzerinden gerçekleştirilir ve kişisel bilgilerinizin gizliliği tamamen korunur.</p>
+                    <div class="online-features">
+                        <div class="online-feature">
+                            <i class="fas fa-check"></i>
+                            <p>Coğrafi konumdan bağımsız erişim imkanı</p>
+                        </div>
+                        <div class="online-feature">
+                            <i class="fas fa-check"></i>
+                            <p>Kendi güvenli ortamınızda terapi alma konforu</p>
+                        </div>
+                        <div class="online-feature">
+                            <i class="fas fa-check"></i>
+                            <p>Yolda geçirilecek zamandan tasarruf</p>
+                        </div>
+                        <div class="online-feature">
+                            <i class="fas fa-check"></i>
+                            <p>Seyahat veya taşınma durumlarında terapiye devam edebilme</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-light">Online Randevu Al</a>
+                </div>
+                <div class="online-image">
+                    <img src="nur3.png" alt="Online Terapi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>Sorularınız için benimle iletişime geçebilir veya randevu alabilirsiniz.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adres</h4>
+                            <p>Ülke Plaza, Melikgazi, Kayseri</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefon</h4>
+                            <a href="tel:+905555555555">+90 555 555 55 55</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-posta</h4>
+                            <a href="mailto:info@nurhisarciklioglu.com">info@nurhisarciklioglu.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                            <p>Cumartesi: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50137.99326388889!2d35.467387!3d38.722759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a1111c442d345%3A0x5f1397bc80938d69!2sMelikgazi%2FKayseri!5e0!3m2!1str!2str!4v1648458845858!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Nur Hisarcıklıoğlu</h2>
+                    <p>Profesyonel psikolojik danışmanlık ve terapi hizmetleri ile ruhsal iyileşme yolculuğunuzda yanınızdayım.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/psikolognurhisarciklioglu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/psikolognurhisarciklioglu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Hakkımda</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="#approach"><i class="fas fa-chevron-right"></i> Yaklaşımım</a></li>
+                        <li><a href="#online"><i class="fas fa-chevron-right"></i> Online Terapi</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Bireysel Terapi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Çift Terapisi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Çocuk ve Ergen Terapisi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Bilişsel Davranışçı Terapi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> EMDR Terapisi</a></li>
+                        <li><a href="#online"><i class="fas fa-chevron-right"></i> Online Terapi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Psikolog Nur Hisarcıklıoğlu. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+        
+        closeMenuBtn.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
