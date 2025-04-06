@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nur Hisarcıklıoğlu | Klinik Psikolog</title>
+    <title>Psk. Nur Hisarcıklıoğlu | Kayseri Psikolog</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* --- Siyah Beyaz Renk Paleti ve Genel Stil Ayarları --- */
         :root {
-            --primary: #000000;
-            --secondary: #ffffff;
-            --accent: #888888;
-            --light-gray: #f5f5f5;
-            --mid-gray: #dddddd;
-            --dark-gray: #333333;
-            --text-dark: #222222;
-            --text-light: #666666;
+            --primary: #000000; /* Ana Renk: Siyah */
+            --secondary: #ffffff; /* İkincil Renk: Beyaz */
+            --accent: #555555; /* Vurgu Rengi: Koyu Gri */
+            --light-gray: #f4f4f4; /* Açık Gri (Arkaplan vb.) */
+            --mid-gray: #cccccc; /* Orta Gri (Kenarlıklar vb.) */
+            --dark-gray: #333333; /* Koyu Gri (Metinler vb.) */
+            --text-dark: #1a1a1a; /* Ana Metin Rengi (Siyaha Yakın) */
+            --text-light: #666666; /* İkincil Metin Rengi */
             --transition: all 0.4s ease;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Daha hafif gölge */
         }
 
         * {
@@ -35,7 +36,7 @@
             font-family: 'Raleway', sans-serif;
             line-height: 1.7;
             color: var(--text-dark);
-            background-color: var(--secondary);
+            background-color: var(--secondary); /* Ana arkaplan beyaz */
             overflow-x: hidden;
         }
 
@@ -43,7 +44,7 @@
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             line-height: 1.3;
-            color: var(--primary);
+            color: var(--primary); /* Başlıklar siyah */
         }
 
         a {
@@ -51,34 +52,37 @@
             color: inherit;
             transition: var(--transition);
         }
+         a:hover {
+            color: var(--accent); /* Link üzerine gelince vurgu rengi */
+         }
 
         img {
             max-width: 100%;
             height: auto;
+            display: block; /* Resim altındaki boşluğu kaldır */
         }
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1140px; /* Biraz daha geniş container */
             margin: 0 auto;
             padding: 0 15px;
         }
 
+        /* --- Buton Stilleri (Siyah Beyaz) --- */
         .btn {
             display: inline-block;
-            padding: 14px 32px;
+            padding: 12px 30px; /* Biraz daha kompakt buton */
             background-color: var(--primary);
             color: var(--secondary);
-            border: 1px solid var(--primary);
-            font-weight: 500;
-            letter-spacing: 1px;
+            border: 2px solid var(--primary); /* Kenarlık kalınlığı */
+            font-weight: 600; /* Daha belirgin font */
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             font-size: 14px;
             cursor: pointer;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
+            text-align: center;
         }
 
         .btn:hover {
@@ -88,7 +92,7 @@
 
         .btn-outline {
             background-color: transparent;
-            border: 1px solid var(--primary);
+            border: 2px solid var(--primary);
             color: var(--primary);
         }
 
@@ -97,9 +101,17 @@
             color: var(--secondary);
         }
 
+        /* --- Bölüm Stilleri --- */
         .section {
             padding: 100px 0;
             position: relative;
+            border-bottom: 1px solid var(--light-gray); /* Bölümler arasına hafif çizgi */
+        }
+        .section:last-of-type {
+             border-bottom: none;
+        }
+        .section.bg-light {
+            background-color: var(--light-gray); /* Açık gri arkaplanlı bölüm */
         }
 
         .section-title {
@@ -109,31 +121,32 @@
         }
 
         .section-title h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem; /* Biraz daha küçük başlık */
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
+            padding-bottom: 10px;
         }
 
         .section-title h2:after {
             content: '';
             position: absolute;
-            width: 80px;
-            height: 2px;
+            width: 60px; /* Daha kısa çizgi */
+            height: 3px; /* Daha kalın çizgi */
             background-color: var(--primary);
-            bottom: -10px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .section-title p {
             max-width: 700px;
-            margin: 0 auto;
+            margin: 10px auto 0;
             color: var(--text-light);
             font-size: 1.1rem;
         }
 
-        /* Header */
+        /* --- Header (Siyah Beyaz) --- */
         .header {
             position: fixed;
             top: 0;
@@ -148,7 +161,7 @@
 
         .header.scrolled {
             padding: 10px 0;
-            border-bottom: 1px solid var(--mid-gray);
+            border-bottom: 1px solid var(--mid-gray); /* Scroll'da belirginleşen çizgi */
             box-shadow: var(--shadow);
         }
 
@@ -164,7 +177,10 @@
         }
 
         .logo img {
-            height: 80px; /* Increased logo size */
+            height: 60px; /* Logo boyutu */
+            /* Siyah beyaz tema için: Renkli logoyu gri tonlamalı yapar. */
+            /* Eğer logonuz zaten siyah beyaz ise veya renkli kalmasını istiyorsanız bu satırı silin/yorumlayın */
+            filter: grayscale(100%);
         }
 
         .nav-menu {
@@ -173,16 +189,17 @@
         }
 
         .nav-menu li {
-            margin-left: 40px;
+            margin-left: 35px; /* Menü aralığı */
         }
 
         .nav-menu a {
             font-weight: 500;
-            font-size: 15px;
+            font-size: 14px; /* Menü font boyutu */
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
             padding: 5px 0;
+            color: var(--primary);
         }
 
         .nav-menu a:after {
@@ -191,16 +208,14 @@
             width: 0;
             height: 2px;
             background-color: var(--primary);
-            left: 0;
-            bottom: 0;
+            left: 50%; /* Ortadan başla */
+            transform: translateX(-50%); /* Ortala */
+            bottom: -2px; /* Biraz aşağıda */
             transition: var(--transition);
         }
 
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-
-        .nav-menu a:hover:after {
+        .nav-menu a:hover:after,
+        .nav-menu li.active a:after { /* Aktif menü öğesi için */
             width: 100%;
         }
 
@@ -213,287 +228,191 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
+        /* --- Hero Bölümü (Yeniden Düzenlendi) --- */
         .hero {
-            height: 100vh;
+            min-height: 90vh; /* Ekran yüksekliğinin %90'ı */
             display: flex;
             align-items: center;
             position: relative;
-            background-color: var(--light-gray);
-            overflow: hidden;
+            background-color: var(--secondary);
+            text-align: center; /* Metin ortalı */
+            padding-top: 120px; /* Header için boşluk */
+            border-bottom: none; /* Hero bölümü altında çizgi olmasın */
         }
 
         .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+            max-width: 800px; /* İçerik genişliği */
+            margin: 0 auto;
         }
 
-        .hero-text {
-            padding-right: 50px;
-        }
-
-        .hero-text h1 {
-            font-size: 4.5rem;
-            margin-bottom: 30px;
+        .hero-content h1 {
+            font-size: 3.8rem; /* Ana başlık boyutu */
+            margin-bottom: 25px;
             line-height: 1.2;
+            color: var(--primary);
         }
 
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
             color: var(--text-light);
+            font-weight: 300;
         }
 
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            border-radius: 0;
+        .hero-image-circle {
+            width: 200px; /* Yuvarlak resim boyutu */
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 40px; /* Ortala ve altına boşluk */
+            border: 5px solid var(--primary); /* Çerçeve */
             box-shadow: var(--shadow);
         }
-
-        .hero-image:before {
-            content: '';
-            position: absolute;
+         .hero-image-circle img {
             width: 100%;
             height: 100%;
-            border: 2px solid var(--primary);
-            top: 20px;
-            left: 20px;
-            z-index: -1;
-        }
+            object-fit: cover;
+            /* Siyah beyaz tema için: Renkli profil resmini gri tonlamalı yapar. */
+            /* Eğer resminiz zaten siyah beyaz ise veya renkli kalmasını istiyorsanız bu satırı silin/yorumlayın */
+            filter: grayscale(100%);
+         }
 
-        /* About Section */
+        /* --- Hakkımda Bölümü (Yeniden Düzenlendi) --- */
         .about {
-            background-color: var(--secondary);
-            position: relative;
+            background-color: var(--light-gray);
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1fr; /* Tek sütun */
+            gap: 40px;
             align-items: center;
+            text-align: center; /* Metin ortalı */
+            max-width: 900px; /* İçerik genişliği */
+            margin: 0 auto;
         }
 
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            border-radius: 0;
-            box-shadow: var(--shadow);
-        }
-
-        .about-image:after {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            background-color: var(--light-gray);
-            z-index: -1;
-            top: -20px;
-            left: -20px;
-        }
-
-        .about-text h2 {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
 
         .about-text p {
             margin-bottom: 20px;
             color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .about-signature {
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-        }
-
-        .signature-image {
-            width: 150px;
-            margin-right: 20px;
-        }
-
-        .signature-text {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            color: var(--text-dark);
-            font-size: 1.2rem;
-        }
-
-        /* Logo Feature Section */
-        .logo-feature {
-            background-color: var(--light-gray);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .logo-feature-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .logo-feature img {
-            height: 180px; /* Large logo display */
-            margin-bottom: 40px;
-        }
-
-        .logo-feature h2 {
-            font-size: 3rem;
-            margin-bottom: 30px;
-        }
-
-        .logo-feature p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        /* Services Section */
+        /* --- Hizmet Alanları Bölümü --- */
         .services {
-            background-color: var(--secondary);
-            position: relative;
+             background-color: var(--secondary);
         }
-
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Esnek grid */
             gap: 30px;
         }
 
         .service-card {
-            background-color: var(--light-gray);
-            padding: 40px;
+            background-color: var(--secondary);
+            padding: 35px;
             text-align: center;
             transition: var(--transition);
+            border: 1px solid var(--mid-gray); /* İnce kenarlık */
             position: relative;
-            z-index: 1;
-            box-shadow: var(--shadow);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card:before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background-color: var(--primary);
-            bottom: 0;
-            left: 0;
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .service-card:hover:before {
-            width: 100%;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
         }
 
         .service-icon {
-            font-size: 40px;
+            font-size: 36px; /* İkon boyutu */
             color: var(--primary);
             margin-bottom: 20px;
+            line-height: 1;
         }
 
         .service-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem; /* Kart başlığı */
             margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .service-text {
             color: var(--text-light);
-            margin-bottom: 20px;
+            font-size: 0.95rem; /* Kart metni */
+            margin-bottom: 25px;
         }
 
-        /* Approach Section */
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: left; /* Liste sola hizalı */
+            margin-top: 15px;
+        }
+         .service-card ul li {
+             margin-bottom: 8px;
+             position: relative;
+             padding-left: 20px;
+         }
+         .service-card ul li::before {
+             content: '\f00c'; /* FontAwesome check icon */
+             font-family: 'Font Awesome 6 Free';
+             font-weight: 900;
+             position: absolute;
+             left: 0;
+             top: 2px;
+             color: var(--primary);
+         }
+
+
+        /* --- Yaklaşımım Bölümü --- */
         .approach {
             background-color: var(--light-gray);
-            position: relative;
         }
-
         .approach-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
-
-        .approach-text h2 {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
-        }
-
-        .approach-text p {
-            margin-bottom: 20px;
+         .approach-content p {
+            margin-bottom: 25px;
             color: var(--text-light);
-        }
+            font-size: 1.1rem;
+         }
 
-        .approach-steps {
-            margin-top: 40px;
-        }
+         .approach-points {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 30px;
+             margin-top: 40px;
+             text-align: left;
+         }
+         .approach-point {
+             background: var(--secondary);
+             padding: 25px;
+             border: 1px solid var(--mid-gray);
+         }
+         .approach-point h4 {
+             font-size: 1.2rem;
+             margin-bottom: 10px;
+             color: var(--primary);
+             font-weight: 500;
+         }
+          .approach-point p {
+              font-size: 0.95rem;
+              margin-bottom: 0;
+              color: var(--text-light);
+          }
 
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 600;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .step-content h4 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .step-content p {
-            margin-bottom: 0;
-            color: var(--text-light);
-        }
-
-        .approach-image {
-            position: relative;
-        }
-
-        .approach-image img {
-            border-radius: 0;
-            box-shadow: var(--shadow);
-        }
-
-        .approach-image:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--primary);
-            top: 20px;
-            right: -20px;
-            z-index: -1;
-        }
-
-        /* Testimonials Section */
+        /* --- Danışan Yorumları (Testimonials) --- */
         .testimonials {
             background-color: var(--secondary);
             position: relative;
@@ -503,260 +422,185 @@
             max-width: 800px;
             margin: 0 auto;
             position: relative;
+            background-color: var(--light-gray); /* Yorum arkaplanı */
+            padding: 50px;
+            border: 1px solid var(--mid-gray);
         }
 
         .testimonial-item {
-            background-color: var(--light-gray);
-            padding: 60px;
             text-align: center;
             position: relative;
-            display: none;
-            box-shadow: var(--shadow);
+            display: none; /* JS ile yönetilecek */
         }
 
         .testimonial-item.active {
             display: block;
         }
 
-        .testimonial-item:before {
-            content: '"';
-            font-family: 'Playfair Display', serif;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 100px;
+        .testimonial-item .quote-icon {
+            font-size: 40px;
             color: var(--mid-gray);
-            line-height: 1;
+            margin-bottom: 20px;
         }
 
         .testimonial-text {
-            font-size: 1.3rem;
+            font-size: 1.15rem; /* Yorum metni */
             font-style: italic;
             margin-bottom: 30px;
             color: var(--text-dark);
-            font-family: 'Playfair Display', serif;
+            line-height: 1.8;
         }
 
         .testimonial-author {
             font-weight: 600;
             color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .testimonial-role {
-            font-size: 14px;
-            color: var(--text-light);
+            font-size: 1rem;
+            display: block; /* Alt satıra geçmesi için */
+            margin-top: 10px;
         }
 
         .testimonial-nav {
             display: flex;
-            justify-content: center;
-            margin-top: 30px;
+            justify-content: space-between; /* Oklar kenarlarda */
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 10;
         }
 
         .testimonial-nav button {
-            background: none;
-            border: none;
-            font-size: 24px;
+            background: rgba(255, 255, 255, 0.7); /* Hafif transparan */
+            border: 1px solid var(--mid-gray);
             color: var(--primary);
             cursor: pointer;
-            margin: 0 10px;
             transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 50%;
         }
 
         .testimonial-nav button:hover {
+            background: var(--secondary);
             color: var(--accent);
         }
 
-        .testimonial-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            background-color: var(--mid-gray);
-            margin: 0 5px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .dot.active {
-            background-color: var(--primary);
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: var(--light-gray);
-            position: relative;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info h3 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            margin-bottom: 40px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            color: var(--secondary);
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .contact-text h4 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .contact-text p, .contact-text a {
-            color: var(--text-light);
-            transition: var(--transition);
-        }
-
-        .contact-text a:hover {
-            color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            margin-top: 30px;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary);
-            margin-right: 15px;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--dark-gray);
-        }
-
-        .contact-form {
-            background-color: var(--secondary);
-            padding: 50px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--mid-gray);
-            background-color: var(--secondary);
-            font-family: 'Raleway', sans-serif;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        textarea.form-control {
-            height: 150px;
-            resize: none;
-        }
-
-        /* Appointments Section */
+        /* --- Randevu Takvimi --- */
         .appointments {
-            background-color: var(--secondary); /* Arka plan rengini ayarlayabilirsiniz */
+            background-color: var(--light-gray);
+        }
+        .appointments iframe {
+            border: 1px solid var(--mid-gray) !important; /* iframe kenarlığı */
+            min-height: 600px; /* Minimum yükseklik */
         }
 
-        /* Map Section */
-        .map {
-            height: 400px;
-            position: relative;
+        /* --- İletişim Bölümü --- */
+        .contact {
+             background-color: var(--secondary);
         }
-
-        .map iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
+         .contact-info {
+             margin-top: 40px;
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 30px;
+             text-align: left;
+         }
+         .contact-item {
+             display: flex;
+             align-items: flex-start;
+             margin-bottom: 20px;
+         }
+         .contact-icon {
+             font-size: 24px;
+             color: var(--primary);
+             margin-right: 15px;
+             width: 30px; /* İkon alanı */
+             text-align: center;
+             flex-shrink: 0;
+             margin-top: 2px;
+         }
+          .contact-text h4 {
+             font-size: 1.1rem;
+             margin-bottom: 5px;
+             font-weight: 500;
+          }
+          .contact-text p, .contact-text a {
+             color: var(--text-light);
+             font-size: 1rem;
+          }
+          .contact-text a:hover {
+              color: var(--primary);
+              text-decoration: underline;
+          }
 
-        /* Footer */
+         .social-links {
+             margin-top: 40px;
+             text-align: center;
+         }
+         .social-links a {
+             display: inline-block;
+             width: 45px;
+             height: 45px;
+             line-height: 45px;
+             border: 1px solid var(--mid-gray);
+             color: var(--primary);
+             margin: 0 8px;
+             transition: var(--transition);
+             font-size: 18px;
+             border-radius: 50%; /* Yuvarlak ikonlar */
+         }
+         .social-links a:hover {
+             background-color: var(--primary);
+             color: var(--secondary);
+             border-color: var(--primary);
+         }
+
+        /* --- Footer --- */
         .footer {
             background-color: var(--primary);
-            color: var(--secondary);
-            padding: 80px 0 30px;
+            color: rgba(255, 255, 255, 0.7); /* Açık beyaz metin */
+            padding: 60px 0 30px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        .footer-logo {
-            margin-bottom: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            text-align: left;
         }
 
         .footer-logo img {
-            height: 100px; /* Increased logo size in footer */
-            filter: brightness(0) invert(1);
+            height: 60px;
+            filter: brightness(0) invert(1); /* Logoyu beyaz yap (siyah arkaplan için) */
+            margin-bottom: 15px;
         }
 
         .footer-about p {
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
         .footer-heading {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
             color: var(--secondary);
-        }
-
-        .footer-heading:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background-color: var(--secondary);
-            bottom: 0;
-            left: 0;
+            font-weight: 500;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--accent); /* Alt çizgi */
+            display: inline-block;
         }
 
         .footer-links {
             list-style: none;
+            padding: 0;
         }
 
         .footer-links li {
@@ -765,6 +609,7 @@
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
@@ -774,172 +619,140 @@
         }
 
         .footer-contact li {
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
         }
 
         .footer-contact i {
             margin-right: 10px;
             color: var(--secondary);
+            margin-top: 4px; /* İkonu hizala */
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--accent);
             color: rgba(255, 255, 255, 0.5);
-            font-size: 14px;
+            font-size: 0.9rem;
         }
 
-        /* Back to Top */
+        /* --- Geri Dön Butonu --- */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
             background-color: var(--primary);
             color: var(--secondary);
-            display: flex;
+            display: flex; /* İçeriği ortalamak için */
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
             z-index: 999;
+            border: none;
+            border-radius: 4px; /* Hafif köşeli */
         }
 
         .back-to-top.active {
-            opacity: 1;
+            opacity: 0.8; /* Biraz transparan */
             visibility: visible;
         }
 
         .back-to-top:hover {
+            opacity: 1;
             background-color: var(--dark-gray);
         }
 
-        /* Responsive Styles */
+        /* --- Responsive Ayarlar --- */
         @media (max-width: 992px) {
-            .hero-content,
-            .about-content,
-            .approach-content,
-            .contact-content,
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero-text {
-                padding-right: 0;
-            }
-
             .nav-menu {
                 position: fixed;
                 top: 0;
-                right: -300px;
+                right: -100%; /* Başlangıçta gizli */
                 width: 300px;
                 height: 100vh;
                 background-color: var(--secondary);
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 80px 30px 30px;
+                padding: 100px 30px 30px; /* Yukarıdan boşluk */
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: var(--transition);
+                transition: right 0.4s ease; /* Sadece sağa kayma animasyonu */
                 z-index: 1001;
+                border-left: 1px solid var(--mid-gray);
             }
 
             .nav-menu.active {
-                right: 0;
+                right: 0; /* Aktif olunca görünür */
             }
 
             .nav-menu li {
-                margin: 0 0 20px 0;
+                margin: 0 0 25px 0; /* Mobil menü aralığı */
+                width: 100%; /* Tam genişlik */
+            }
+
+            .nav-menu a {
+                 font-size: 15px;
             }
 
             .mobile-toggle {
                 display: block;
-                z-index: 1002;
+                z-index: 1002; /* Menü kapatma butonunun üstünde */
+                position: relative; /* Kapatma butonu için */
             }
 
             .close-menu {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: var(--primary);
-            }
-
-            .logo img {
-                height: 60px; /* Adjusted for mobile */
-            }
-
-            .footer-logo img {
-                height: 80px; /* Adjusted for mobile */
+                 /* close-menu butonu için stil ekleyin (opsiyonel) */
+                 position: absolute;
+                 top: 20px;
+                 right: 20px;
+                 background: none;
+                 border: none;
+                 font-size: 24px;
+                 cursor: pointer;
+                 color: var(--primary);
+                 display: block; /* Her zaman göster */
             }
         }
 
         @media (max-width: 768px) {
-            html {
-                font-size: 14px;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 30px;
-            }
-
-            .testimonial-item {
-                padding: 40px 30px;
-            }
-
-            .logo-feature img {
-                height: 120px; /* Adjusted for mobile */
-            }
+            html { font-size: 15px; }
+            .section { padding: 80px 0; }
+            .hero-content h1 { font-size: 3rem; }
+            .section-title h2 { font-size: 2.5rem; }
+            .services-grid { grid-template-columns: 1fr; } /* Tek sütun */
+            .footer-content { grid-template-columns: 1fr; } /* Tek sütun */
+            .testimonial-nav { left: 5px; right: 5px; } /* Okları daha yakına getir */
+            .testimonial-nav button { width: 35px; height: 35px; font-size: 16px; }
         }
 
         @media (max-width: 576px) {
-            html {
-                font-size: 12px;
-            }
-
-            .section {
-                padding: 50px 0;
-            }
-
-            .hero-text h1 {
-                font-size: 3.5rem;
-            }
-
-            .logo img {
-                height: 50px; /* Further adjusted for small mobile */
-            }
+            html { font-size: 14px; }
+            .section { padding: 60px 0; }
+            .hero-content h1 { font-size: 2.5rem; }
+             .hero-content .subtitle { font-size: 1.1rem; }
+            .hero-image-circle { width: 150px; height: 150px; }
+            .section-title h2 { font-size: 2.2rem; }
+            .btn { padding: 10px 25px; font-size: 13px; }
+            .contact-info { grid-template-columns: 1fr; } /* Tek sütun */
         }
+
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <a href="#" class="logo">
-                    <img src="logo1.png" alt="Nur Hisarcıklıoğlu Logo">
+                <a href="#home" class="logo">
+                    <img src="logo1.png" alt="Psk. Nur Hisarcıklıoğlu Logo">
                 </a>
 
                 <button class="mobile-toggle">
@@ -947,15 +760,13 @@
                 </button>
 
                 <ul class="nav-menu">
-                    <li><a href="#home">Ana Sayfa</a></li>
+                    <button class="close-menu"><i class="fas fa-times"></i></button> <li><a href="#home">Ana Sayfa</a></li>
                     <li><a href="#about">Hakkımda</a></li>
-                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#services">Çalışma Alanları</a></li>
                     <li><a href="#approach">Yaklaşımım</a></li>
                     <li><a href="#testimonials">Danışan Yorumları</a></li>
-                    <li><a href="#appointments">Randevu Takvimi</a></li> <li><a href="#contact">İletişim</a></li>
-                    <button class="close-menu">
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <li><a href="#appointments">Randevu Takvimi</a></li>
+                    <li><a href="#contact">İletişim</a></li>
                 </ul>
             </div>
         </div>
@@ -964,49 +775,29 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Zihinsel Sağlık ve İçsel Huzur Yolculuğu</h1>
-                    <p>Hayatın zorluklarıyla başa çıkmak, kendinizi daha iyi anlamak ve içsel potansiyelinizi keşfetmek için profesyonel psikolojik destek sunuyorum. Bilimsel temelli yaklaşımlar ve empatik bir anlayışla, zihinsel sağlığınızı güçlendirmenize yardımcı oluyorum.</p>
-                    <a href="#contact" class="btn">Randevu Alın</a>
-                    <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Hizmetlerim</a>
-                </div>
-                <div class="hero-image">
+                <div class="hero-image-circle">
                     <img src="nur1.png" alt="Psikolog Nur Hisarcıklıoğlu">
                 </div>
+                <h1>Psk. Nur Hisarcıklıoğlu</h1>
+                <p class="subtitle">Kayseri'de Bireysel, Çift ve Ergen Terapisi Alanlarında Uzman Psikolog Desteği</p>
+                <a href="#contact" class="btn">İletişime Geçin</a>
+                <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Çalışma Alanlarım</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about section">
+    <section id="about" class="about section bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>Tanışalım</h2>
-                <p>Psikolojik iyilik yolculuğunuzda size eşlik edecek profesyonel geçmişim ve yaklaşımım.</p>
+                <h2>Hakkımda</h2>
             </div>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="nur2.png" alt="Psikolog Nur Hisarcıklıoğlu">
-                </div>
                 <div class="about-text">
-                    <h2>Psikolog Nur Hisarcıklıoğlu</h2>
-                    <p>Psikoloji alanındaki yolculuğum, insan zihninin karmaşıklığına ve her bireyin benzersiz hikayesine olan derin ilgimle başladı. Girne Amerikan Üniversitesi İngilizce Psikoloji bölümünden onur derecesiyle mezun oldum ve eğitimim boyunca çeşitli psikolojik yaklaşımları derinlemesine inceleme fırsatı buldum.</p>
-                    <p>Profesyonel kariyerime çeşitli kliniklerde staj yaparak başladım ve şu an Ülke Plaza'da, bireysel terapi, çift terapisi ve ergen psikolojisi alanlarında uzmanlaşmış bir psikolog olarak hizmet veriyorum. Sürekli eğitim ve gelişime olan inancımla, bilimsel temelli en güncel yaklaşımları takip ediyor ve uygulamalarıma entegre ediyorum.</p>
-                    <p>Terapötik yaklaşımımda, her danışanın benzersiz ihtiyaçlarına saygı duyarak, güvenli ve destekleyici bir ortam oluşturmayı önceliklendiriyorum. Amacım, danışanlarımın kendi içsel kaynaklarını keşfetmelerine ve yaşamlarında anlamlı değişimler yaratmalarına rehberlik etmektir.</p>
-                    <div class="about-signature">
-                        <div class="signature-text">"Gerçek değişim, kendimizi anlamakla başlar ve kendimizi kabul etmekle devam eder."</div>
-                    </div>
+                     <h3>Merhaba, Ben Psikolog Nur Hisarcıklıoğlu</h3>
+                    <p>Kayseri doğumluyum. İlk ve orta öğrenimimi Kayseri'de tamamladıktan sonra, lisans eğitimimi Girne Amerikan Üniversitesi İngilizce Psikoloji bölümünde onur öğrencisi olarak bitirdim. Eğitim sürecim boyunca çeşitli kliniklerde staj yaparak pratik deneyim kazandım.</p>
+                    <p>Şu anda Kayseri Ülke Plaza bünyesinde danışanlarıma hizmet vermekteyim. Ağırlıklı olarak yetişkin, ergen ve çiftlerle çalışıyorum. Mesleki gelişimin yaşam boyu devam eden bir süreç olduğuna inanıyor, bu nedenle danışanlarıma en güncel ve etkili yöntemlerle destek olabilmek amacıyla sürekli olarak kendimi yenilemeye ve geliştirmeye özen gösteriyorum.</p>
+                    <p>Temel amacım, danışanlarımın yaşadığı zorlukları anlamalarına, içsel kaynaklarını keşfetmelerine ve daha sağlıklı ilişkiler kurarak yaşam kalitelerini artırmalarına yardımcı olmaktır. Güvenli ve yargısız bir terapi ortamında, sizinle iş birliği içinde çalışmayı dört gözle bekliyorum.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="logo-feature">
-        <div class="container">
-            <div class="logo-feature-inner">
-                <img src="logo1.png" alt="Nur Hisarcıklıoğlu Logo">
-                <h2>Zihinsel Sağlık Yolculuğunuzda Profesyonel Rehberlik</h2>
-                <p>Psikolojik iyilik halinizi desteklemek ve içsel potansiyelinizi ortaya çıkarmak için bilimsel temelli yaklaşımlar ve empatik bir anlayışla yanınızdayım. Her danışanın benzersiz hikayesine saygı duyarak, kişiselleştirilmiş terapi hizmetleri sunuyorum.</p>
-                <a href="#contact" class="btn">Hemen İletişime Geçin</a>
             </div>
         </div>
     </section>
@@ -1014,111 +805,95 @@
     <section id="services" class="services section">
         <div class="container">
             <div class="section-title">
-                <h2>Hizmetlerim</h2>
-                <p>Zihinsel sağlığınızı desteklemek ve yaşam kalitenizi artırmak için sunduğum profesyonel hizmetler.</p>
+                <h2>Çalışma Alanları ve Uzmanlıklar</h2>
+                <p>Bireysel, çift ve ergen odaklı olarak sunduğum terapi hizmetleri ve uzmanlık alanlarım.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="service-title">Bireysel Terapi</h3>
-                    <p class="service-text">Kendinizi daha iyi anlamanıza, duygusal zorlukları aşmanıza ve kişisel gelişiminizi desteklemenize yardımcı oluyorum. Kaygı, depresyon, stres yönetimi ve öz-değer konularında bilimsel temelli yaklaşımlarla destek sunuyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
+                 <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user"></i></div>
+                    <h3 class="service-title">Bireysel Terapi (Yetişkin & Ergen)</h3>
+                    <p class="service-text">Kişisel zorlukların üstesinden gelme, kendini anlama ve potansiyelini gerçekleştirme yolculuğunda size eşlik ediyorum.</p>
+                    <ul>
+                        <li>Depresyon ve Kronik Mutsuzluk</li>
+                        <li>Kaygı Bozuklukları (Panik Atak, Sosyal Fobi, Yaygın Anksiyete)</li>
+                        <li>Obsesif-Kompulsif Bozukluk (OKB)</li>
+                        <li>Özgüven Sorunları ve Yetersizlik Duyguları</li>
+                        <li>Stres Yönetimi ve Tükenmişlik</li>
+                        <li>Travma ve Yas Süreci</li>
+                        <li>Öfke Kontrolü ve Davranış Problemleri</li>
+                        <li>Motivasyon Eksikliği ve Erteleme</li>
+                        <li>Bağımlılıklar (Madde, İnternet, Sosyal Medya vb.)</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="service-title">Çift Terapisi</h3>
-                    <p class="service-text">İlişkinizde daha derin bir bağ kurmanıza ve iletişim sorunlarını çözmenize yardımcı oluyorum. Gottman yaklaşımı ile çatışma çözümü, duygusal bağ kurma ve ilişki dinamiklerini iyileştirme konularında rehberlik ediyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="service-title">Çift ve Evlilik Terapisi</h3>
+                    <p class="service-text">İlişkinizi güçlendirmek, iletişim sorunlarını çözmek ve zor zamanları birlikte aşmak için destek sunuyorum.</p>
+                     <ul>
+                        <li>İletişim Problemleri ve Çatışmalar</li>
+                        <li>Güven Sorunları ve Sadakatsizlik (Aldatma)</li>
+                        <li>Evlilik Öncesi Danışmanlık</li>
+                        <li>Boşanma Süreci Danışmanlığı</li>
+                        <li>Aile İçi İletişim Sorunları</li>
+                        <li>Cinsel Terapi Danışmanlığı</li>
+                        <li>İlişkiyi Canlandırma ve Güçlendirme</li>
+                        <li>Ebeveynlik Rolleri ve Zorlukları</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="service-title">Ergen Terapisi</h3>
-                    <p class="service-text">Ergenlik döneminin karmaşık duygusal ve sosyal zorluklarıyla başa çıkmada gençlere destek oluyorum. Kimlik gelişimi, akran ilişkileri, aile dinamikleri ve akademik stres konularında uzmanlaşmış terapi hizmetleri sunuyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="service-title">İletişim Becerileri</h3>
-                    <p class="service-text">Etkili iletişim, sağlıklı ilişkilerin temelidir. "Ben dili" kullanımı, aktif dinleme ve çatışma çözümü gibi iletişim becerilerini geliştirmenize yardımcı olarak, hem profesyonel hem de kişisel ilişkilerinizi güçlendiriyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3 class="service-title">Stres Yönetimi</h3>
-                    <p class="service-text">Modern yaşamın yoğun temposunda denge bulmak zorlaşabilir. Mindfulness, nefes teknikleri ve bilişsel stratejiler gibi kanıta dayalı yöntemlerle, günlük stresle başa çıkma ve içsel huzuru bulma konusunda size rehberlik ediyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="service-title">Online Terapi</h3>
-                    <p class="service-text">Coğrafi sınırlamaları aşarak, güvenli ve profesyonel bir ortamda psikolojik destek sunuyorum. Video konferans yoluyla, yüz yüze terapiyle aynı etik standartlarda ve etkili bir terapi deneyimi yaşamanızı sağlıyorum.</p>
-                    <a href="#contact" class="btn btn-outline">Bilgi Alın</a>
+                    <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="service-title">Kullanılan Terapi Ekolleri</h3>
+                    <p class="service-text">Terapi sürecinde, danışanın ihtiyacına göre bilimsel temelli ve kanıtlanmış çeşitli yöntemlerden faydalanıyorum.</p>
+                    <ul>
+                        <li>Bilişsel Davranışçı Terapi (BDT)</li>
+                        <li>Gottman Çift Terapisi</li>
+                        <li>Çözüm Odaklı Terapi</li>
+                        <li>Cinsel Terapi</li>
+                        <li>MMPI (Minnesota Çok Yönlü Kişilik Envanteri)</li>
+                        <li>WISC-R (Wechsler Çocuklar İçin Zeka Ölçeği)</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="approach" class="approach section">
+    <section id="approach" class="approach section bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>Yaklaşımım</h2>
-                <p>Terapötik süreçte kullandığım bilimsel temelli yaklaşımlar ve prensipler.</p>
+                <h2>Terapi Yaklaşımım</h2>
+                <p>Terapi sürecinde benimsediğim temel ilkeler ve yöntemler.</p>
             </div>
             <div class="approach-content">
-                <div class="approach-text">
-                    <h2>Bütüncül Terapi Metodolojisi</h2>
-                    <p>Terapötik yaklaşımımda, her bireyin zihin, beden ve ruh bütünlüğünü göz önünde bulundurarak, kişiye özel çözümler geliştiriyorum. Bilimsel araştırmalarla desteklenen, kanıta dayalı yöntemleri kullanırken, empatik ve destekleyici bir ortam oluşturmayı önceliklendiriyorum.</p>
-                    <p>İyileşme sürecinin, danışanın aktif katılımıyla mümkün olduğuna inanıyorum. Bu nedenle, terapi sürecinde işbirlikçi bir yaklaşım benimseyerek, danışanlarımın kendi içsel kaynaklarını keşfetmelerine ve güçlenmelerine yardımcı oluyorum.</p>
-                    <div class="approach-steps">
-                        <div class="step-item">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h4>Keşif ve Anlama</h4>
-                                <p>Yaşam hikayenizi, düşüncelerinizi ve duygularınızı derinlemesine anlamak için güvenli bir alan oluşturuyorum. Bu aşamada, terapötik hedeflerinizi belirliyor ve size özel bir terapi planı geliştiriyoruz.</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h4>Farkındalık ve İçgörü</h4>
-                                <p>Düşünce kalıplarınızı, duygusal tepkilerinizi ve davranışlarınızı şekillendiren temel inançları keşfederek, kendinizi daha derinden anlamanıza yardımcı oluyorum. Bu farkındalık, değişimin ilk adımıdır.</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h4>Dönüşüm ve Uygulama</h4>
-                                <p>Yeni beceriler ve stratejiler geliştirerek, içsel kaynaklarınızı güçlendiriyor ve yaşamınızda anlamlı değişimler yaratmanıza destek oluyorum. Bu süreçte, öğrendiklerinizi günlük yaşamınıza entegre etmenize rehberlik ediyorum.</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h4>Sürdürülebilir Gelişim</h4>
-                                <p>Kazanılan içgörüleri ve becerileri pekiştirerek, uzun vadeli zihinsel sağlık ve duygusal dayanıklılık için stratejiler geliştiriyoruz. Amacımız, terapiden sonra da devam edecek sürdürülebilir bir iyilik hali oluşturmaktır.</p>
-                            </div>
-                        </div>
+                <p>Terapiyi, danışanla terapist arasında kurulan güvenli ve işbirlikçi bir yolculuk olarak görüyorum. Amacım sadece sorunları çözmek değil, aynı zamanda bireylerin ve çiftlerin kendi içsel güçlerini fark etmelerini, daha sağlıklı başa çıkma mekanizmaları geliştirmelerini ve ilişkilerini zenginleştirmelerini sağlamaktır.</p>
+                <p>Her bireyin ve ilişkinin benzersiz olduğuna inanarak, size özel bir terapi planı oluşturuyorum. Süreç boyunca empati, saygı ve gizlilik esastır.</p>
+
+                <div class="approach-points">
+                    <div class="approach-point">
+                        <h4><i class="fas fa-comments"></i> Etkili İletişim</h4>
+                        <p>"Ben dili" kullanımını teşvik ederek, duygu ve düşüncelerinizi açıkça ifade etmenizi ve partnerinizle/kendinizle daha derin bir anlayış kurmanızı destekliyorum. Çatışmadan uzlaşmaya giden yolda iletişimin gücüne inanıyorum.</p>
                     </div>
-                </div>
-                <div class="approach-image">
-                    <img src="nur3.png" alt="Terapi Yaklaşımı">
+                     <div class="approach-point">
+                        <h4><i class="fas fa-heart"></i> Duygu Odaklılık</h4>
+                        <p>Duygularınızı tanıma, anlama ve yönetme becerilerinizi geliştirmeye odaklanıyoruz. Özellikle çift terapisinde, Gottman metodu gibi bilimsel yaklaşımlarla duygusal bağı güçlendirmeyi hedefliyoruz.</p>
+                    </div>
+                    <div class="approach-point">
+                        <h4><i class="fas fa-lightbulb"></i> Farkındalık ve İçgörü</h4>
+                        <p>Sorunların kökenine inerek, düşünce ve davranış kalıplarınız hakkında farkındalık kazanmanıza yardımcı oluyorum. Bu içgörü, kalıcı değişimin temelini oluşturur.</p>
+                    </div>
+                     <div class="approach-point">
+                         <h4><i class="fas fa-hands-helping"></i> İşbirliği ve Güven</h4>
+                         <p>Terapi süreci, sizin aktif katılımınızla ilerler. Güvenli, yargısız ve destekleyici bir ortam yaratarak, hedeflerinize ulaşmanız için sizinle birlikte çalışıyorum.</p>
+                    </div>
+                     <div class="approach-point">
+                        <h4><i class="fas fa-book-reader"></i> Bilimsel Yöntemler</h4>
+                        <p>Bilişsel Davranışçı Terapi (BDT), Gottman Çift Terapisi, Çözüm Odaklı Terapi gibi kanıta dayalı ve güncel terapi ekollerini kullanarak etkili sonuçlar almayı amaçlıyorum.</p>
+                    </div>
+                     <div class="approach-point">
+                        <h4><i class="fas fa-universal-access"></i> Pratik Egzersizler</h4>
+                        <p>Seanslarda öğrendiklerinizi günlük hayata taşımanıza yardımcı olacak pratik egzersizler (örn. göz teması, 5 sevgi dili, sarılma egzersizleri) kullanıyoruz.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1128,154 +903,105 @@
         <div class="container">
             <div class="section-title">
                 <h2>Danışan Yorumları</h2>
-                <p>Terapötik yolculuklarında benimle çalışan danışanlarımın deneyimleri.</p>
+                <p>Benimle çalışan danışanlarımın terapi süreci hakkındaki deneyimleri.</p>
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial-item active">
-                    <p class="testimonial-text">"Nur Hanım ile çalışmaya başladığımda, sürekli kaygı ve panik ataklar yaşıyordum. Onun sabırlı ve anlayışlı yaklaşımı sayesinde, düşünce kalıplarımı fark etmeyi ve onları değiştirmeyi öğrendim. Artık duygularımı tanıyor ve yönetebiliyorum. Hayatımda ilk kez gerçek bir iç huzur hissediyorum ve bunun için Nur Hanım'a minnettarım."</p>
-                    <div class="testimonial-author">Bireysel Terapi Danışanı</div>
-                    <div class="testimonial-role">Kaygı Bozukluğu</div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Nur hocamla çift terapisi sayesinde tanıştık, kendisi ılımlı ve güleryüzlü. Hem eşimi hem de beni ayrı ayrı dinleyip fikirlerimize saygı duymamız gerektiğini, sevgi dilimizi bize anlattı. Boşanmanın eşiğine geldiğim eşimle şu anda 2. balayımızı yaşıyoruz... Evliliğimize yaptığımız en büyük yatırım nur hocamı tercih etmekti. Çok teşekkür ederiz hocam..."</p>
+                    <span class="testimonial-author">Çift Terapisi Danışanı</span>
                 </div>
 
                 <div class="testimonial-item">
-                    <p class="testimonial-text">"Eşimle yaşadığımız iletişim sorunları nedeniyle Nur Hanım'a başvurduk. Onun rehberliğinde, birbirimizi gerçekten dinlemeyi ve anlamayı öğrendik. 'Ben dili' kullanımı ve aktif dinleme teknikleri, ilişkimizde devrim yarattı. Artık çatışmalarımızı yapıcı bir şekilde çözebiliyor ve duygusal bağımızı güçlendirebiliyoruz. Nur Hanım'ın profesyonel yaklaşımı ve içten desteği için teşekkür ederiz."</p>
-                    <div class="testimonial-author">Çift Terapisi Danışanı</div>
-                    <div class="testimonial-role">İlişki Sorunları</div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Nur hocamla yaklaşık 3 ay süren panik atak için bir tedavi sürecim oldu... Online başladığım danışmanlığa yüz yüze devam ettik... Yaşadığım o ağır krizler, ambulans çağırmalar, dehşete kapılma vb. kaygı bozukluklarımı sayesinde atlattım... Kesinlikle bir doktor danışan değil de size sizden biri gibi, bir arkadaşınız gibi davranıyor..."</p>
+                     <span class="testimonial-author">Panik Atak Danışanı</span>
                 </div>
 
                 <div class="testimonial-item">
-                    <p class="testimonial-text">"Ergenlik dönemindeki kızımın davranış değişiklikleri ve okul sorunları nedeniyle Nur Hanım'a başvurduk. Hem kızımla bireysel seanslar hem de aile olarak görüşmeler yaptık. Nur Hanım'ın dengeli yaklaşımı ve pratik önerileri sayesinde, aile içi iletişimimiz güçlendi ve kızımın özgüveni arttı. Bir ebeveyn olarak, çocuğumu daha iyi anlama ve destekleme konusunda çok şey öğrendim. Tüm ailemiz için değerli bir deneyim oldu."</p>
-                    <div class="testimonial-author">Aile Terapisi Danışanı</div>
-                    <div class="testimonial-role">Ergen Sorunları</div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Kendimi bildim bileli özgüven problemlerim vardı, kiminle görüştüysem Nur hocam kadar büyük bir etki görmedim. İç dünyamda olan özgüvensizliğimi aştığımı hissediyorum... Tatlı dili, güleryüzü ve motive edici konuşmalarıyla her zaman destek oldu. Kendisine ihtiyacım olduğu her zaman ulaşabildim..."</p>
+                     <span class="testimonial-author">Özgüven Problemi Danışanı</span>
                 </div>
 
-                <div class="testimonial-item">
-                    <p class="testimonial-text">"İş hayatındaki yoğun stres ve tükenmişlik hissi nedeniyle Nur Hanım'dan destek aldım. Online terapi seanslarımız sayesinde, stres kaynaklarımı belirlemeyi ve etkili başa çıkma stratejileri geliştirmeyi öğrendim. Mindfulness teknikleri ve bilişsel yeniden yapılandırma çalışmaları, zihinsel sağlığımı yeniden kazanmamda çok etkili oldu. Şimdi hem profesyonel hem de kişisel hayatımda daha dengeli ve huzurluyum."</p>
-                    <div class="testimonial-author">Online Terapi Danışanı</div>
-                    <div class="testimonial-role">Stres Yönetimi</div>
+                 <div class="testimonial-item">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Çocukluğumdan beri süregelen takıntı problemim vardı nur hocamı çevremden duyup randevu alarak gittim kendisi beni pozitif bi şekilde karşıladı ve seanslara olan inancımı arttırdı... sayesinde kendimi çok daha iyi hissediyorum... Kendimi kötü hissettiğimde mesaj attım kısa sürede dönüş sağladı..."</p>
+                    <span class="testimonial-author">OKB Danışanı</span>
                 </div>
-            </div>
-            <div class="testimonial-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-                <span class="dot" data-index="3"></span>
-            </div>
-            <div class="testimonial-nav">
-                <button id="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="testimonial-nav">
+                    <button id="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="appointments" class="appointments section">
+    <section id="appointments" class="appointments section bg-light">
         <div class="container">
             <div class="section-title">
                 <h2>Randevu Takvimi</h2>
-                <p>Aşağıdaki takvimden uygun zamanları görüntüleyebilir ve randevu oluşturmak için benimle iletişime geçebilirsiniz.</p>
+                <p>Müsaitlik durumumu aşağıdaki takvimden inceleyebilir ve randevu oluşturmak için benimle iletişime geçebilirsiniz.</p>
             </div>
             <iframe src="https://calendar.google.com/calendar/embed?src=f90a2c9af1797d0c916032f264514567dd28393989df43d69cc39bf1c04ea9e0%40group.calendar.google.com&ctz=Europe%2FIstanbul" style="border: 0; margin: 0 auto; display: block;" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact section">
         <div class="container">
             <div class="section-title">
                 <h2>İletişime Geçin</h2>
-                <p>Zihinsel sağlık yolculuğunuza başlamak için ilk adımı atın.</p>
+                <p>Randevu almak, bilgi sormak veya terapi süreci hakkında konuşmak için bana ulaşabilirsiniz.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>İletişim Bilgileri</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                     <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Adres</h4>
+                            <p>Ülke Plaza, Kayseri</p>
                             </div>
-                            <div class="contact-text">
-                                <h4>Adres</h4>
-                                <p>Ülke Plaza, Kayseri</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Telefon</h4>
-                                <a href="tel:+905415191432">+90 541 519 14 32</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>WhatsApp</h4>
-                                <a href="https://wa.me/905415191432" target="_blank">WhatsApp'tan Bana Ulaşmak için TIKLAYIN</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>E-posta</h4>
-                                <a href="mailto:fhisarciklioglu@gmail.com">fhisarciklioglu@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Çalışma Saatleri</h4>
-                                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
-                                <p>Cumartesi: 10:00 - 15:00</p>
-                            </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Telefon</h4>
+                            <a href="tel:+905415191432">+90 541 519 14 32</a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/psikolognurhisarciklioglu/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/psikolognurhisarciklioglu" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/905415191432" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:fhisarciklioglu@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/905415191432" target="_blank">+90 541 519 14 32</a><br>
+                            <a href="https://wa.me/905415191432" target="_blank" style="font-size: 0.9em; text-decoration: underline;">(Mesaj göndermek için tıklayın)</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>E-posta</h4>
+                            <a href="mailto:fhisarciklioglu@gmail.com">fhisarciklioglu@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-text">
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                            <p>Cumartesi: 10:00 - 15:00</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Telefon Numaranız">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="" selected disabled>Hizmet Seçiniz</option>
-                                <option value="Bireysel Terapi">Bireysel Terapi</option>
-                                <option value="Çift Terapisi">Çift Terapisi</option>
-                                <option value="Ergen Terapisi">Ergen Terapisi</option>
-                                <option value="İletişim Becerileri">İletişim Becerileri</option>
-                                <option value="Stres Yönetimi">Stres Yönetimi</option>
-                                <option value="Online Terapi">Online Terapi</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Mesajınız" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Mesaj Gönder</button>
-                    </form>
-                </div>
+                <div class="social-links">
+                     <a href="https://www.instagram.com/psikolognurhisarciklioglu/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.facebook.com/psikolognurhisarciklioglu" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://wa.me/905415191432" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                     <a href="mailto:fhisarciklioglu@gmail.com" title="E-posta"><i class="fas fa-envelope"></i></a>
+                     </div>
             </div>
         </div>
-    </section>
-
-    <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50137.99326388889!2d35.467387!3d38.722759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a1111c442d345%3A0x5f1397bc80938d69!2sMelikgazi%2FKayseri!5e0!3m2!1str!2str!4v1648458845858!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <footer class="footer">
@@ -1283,19 +1009,20 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="logo1.png" alt="Nur Hisarcıklıoğlu Logo">
+                         <img src="logo1.png" alt="Psk. Nur Hisarcıklıoğlu Logo">
                     </div>
-                    <p>"Gerçek değişim, kendimizi anlamakla başlar ve kendimizi kabul etmekle devam eder." Profesyonel psikolojik danışmanlık hizmetlerimle, zihinsel sağlığınızı güçlendirmenize ve içsel potansiyelinizi keşfetmenize yardımcı oluyorum.</p>
+                    <p>Psk. Nur Hisarcıklıoğlu - Kayseri'de bireysel, çift ve ergen terapisi alanlarında profesyonel destek.</p>
                 </div>
                 <div class="footer-links-container">
                     <h3 class="footer-heading">Hızlı Bağlantılar</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Ana Sayfa</a></li>
                         <li><a href="#about">Hakkımda</a></li>
-                        <li><a href="#services">Hizmetler</a></li>
+                        <li><a href="#services">Çalışma Alanları</a></li>
                         <li><a href="#approach">Yaklaşımım</a></li>
                         <li><a href="#testimonials">Danışan Yorumları</a></li>
-                        <li><a href="#appointments">Randevu Takvimi</a></li> <li><a href="#contact">İletişim</a></li>
+                        <li><a href="#appointments">Randevu Takvimi</a></li>
+                        <li><a href="#contact">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact-container">
@@ -1307,152 +1034,172 @@
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+90 541 519 14 32</span>
+                            <a href="tel:+905415191432">+90 541 519 14 32</a>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>fhisarciklioglu@gmail.com</span>
+                             <a href="mailto:fhisarciklioglu@gmail.com">fhisarciklioglu@gmail.com</a>
                         </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Pazartesi - Cuma: 09:00 - 18:00</span>
+                         <li>
+                            <i class="fab fa-whatsapp"></i>
+                             <a href="https://wa.me/905415191432" target="_blank">WhatsApp'tan Ulaşın</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Psikolog Nur Hisarcıklıoğlu. Tüm Hakları Saklıdır.</p>
+                <p>© 2025 Psk. Nur Hisarcıklıoğlu. Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top" id="backToTop">
+    <a href="#" class="back-to-top" id="backToTop" title="Yukarı Çık">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <script>
-        // Mobile Menu Toggle
+        // --- Mobil Menü ---
         const mobileToggle = document.querySelector('.mobile-toggle');
         const closeMenu = document.querySelector('.close-menu');
         const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-menu a'); // Menü linkleri
 
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.add('active');
-        });
+        if (mobileToggle && navMenu && closeMenu) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.add('active');
+            });
 
-        closeMenu.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
+            closeMenu.addEventListener('click', () => {
                 navMenu.classList.remove('active');
             });
-        });
 
-        // Header Scroll Effect
+            // Linke tıklayınca menüyü kapat
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // --- Header Scroll Efekti ---
         const header = document.querySelector('.header');
+        if(header){
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) { // 80px scroll sonrası
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Testimonial Slider
+        // --- Danışan Yorumları Slider ---
         const testimonialItems = document.querySelectorAll('.testimonial-item');
-        const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prev-testimonial');
         const nextBtn = document.getElementById('next-testimonial');
         let currentIndex = 0;
 
         function showTestimonial(index) {
-            testimonialItems.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            testimonialItems[index].classList.add('active');
-            dots[index].classList.add('active');
+            if(testimonialItems.length === 0) return; // Yorum yoksa çık
+            testimonialItems.forEach((item, i) => {
+                item.classList.remove('active');
+                if(i === index) {
+                    item.classList.add('active');
+                }
+            });
         }
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                currentIndex = parseInt(dot.getAttribute('data-index'));
+        if(prevBtn && nextBtn && testimonialItems.length > 0) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
                 showTestimonial(currentIndex);
             });
-        });
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
-            showTestimonial(currentIndex);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % testimonialItems.length;
-            showTestimonial(currentIndex);
-        });
-
-        // Auto slide testimonials
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % testimonialItems.length;
-            showTestimonial(currentIndex);
-        }, 8000);
-
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTopBtn.classList.add('active');
-            } else {
-                backToTopBtn.classList.remove('active');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % testimonialItems.length;
+                showTestimonial(currentIndex);
             });
-        });
 
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+             // İlk yorumu göster
+             showTestimonial(currentIndex);
+
+            // Otomatik geçiş (isteğe bağlı)
+            // setInterval(() => {
+            //     currentIndex = (currentIndex + 1) % testimonialItems.length;
+            //     showTestimonial(currentIndex);
+            // }, 8000); // 8 saniyede bir değiştir
+        } else if (testimonialItems.length > 0) {
+             // Oklar yoksa bile ilk yorumu göster
+              showTestimonial(currentIndex);
+        }
+
+
+        // --- Başa Dön Butonu ---
+        const backToTopBtn = document.getElementById('backToTop');
+        if(backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) { // 400px scroll sonrası göster
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', (e) => {
                 e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+        // --- Smooth Scroll (Güncellenmiş Offset Hesaplama) ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                // Sadece sayfa içi linkler için
+                if (href && href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        const headerOffset = header ? header.offsetHeight : 70; // Header yüksekliği veya varsayılan
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Adjusted offset for fixed header
-                    const headerOffset = document.querySelector('.header').offsetHeight || 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
 
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                         // Aktif menü linkini işaretle (opsiyonel)
+                         navLinks.forEach(link => link.parentNode.classList.remove('active'));
+                         this.parentNode.classList.add('active');
+                    }
                 }
             });
         });
 
-        // Contact Form Submission (Placeholder)
-        const contactForm = document.getElementById('contactForm');
+         // Sayfa yüklendiğinde ve scroll edildiğinde aktif bölümü işaretle (Opsiyonel)
+        const sections = document.querySelectorAll('.section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                 const headerOffset = header ? header.offsetHeight : 70;
+                // Ekranın üstünden biraz daha aşağıda bir noktayı kontrol et
+                if (pageYOffset >= sectionTop - headerOffset - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Burada form verilerini sunucuya gönderme işlemleri yapılabilir.
-            // Örneğin: fetch API veya XMLHttpRequest kullanarak.
-            alert('Mesajınız gönderildi. En kısa sürede size dönüş yapılacaktır.');
-            contactForm.reset();
+            navLinks.forEach(link => {
+                link.parentNode.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.parentNode.classList.add('active');
+                }
+            });
         });
+
+
     </script>
 </body>
 </html>
